@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PKZ · One to One | Treino de alta performance</title>
+
+    <!-- Fonts Hub: Barlow Condensed (títulos) e Barlow (texto) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome (ícones das redes sociais no footer) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="hub">
+    <!-- HEADER (nav) do Hub: links no centro + botão -->
+    <header class="hub-cabecalho">
+        <nav aria-label="Navegação do Hub">
+            <ul class="hub-links">
+                <li><a class="hub-link ativo" href="#inicio">Início</a></li>
+                <li><a class="hub-link" href="#escolha">Escolha</a></li>
+                <li><a class="hub-link" href="#videos">Vídeos</a></li>
+            </ul>
+        </nav>
+        <a class="hub-link hub-cta" href="../one-to-one/index.html#agendamento">Agende um treino</a>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hub-hero hub-container" id="inicio">
+            <!-- Placeholder da foto de fundo -->
+            <figure class="hub-hero-foto">Foto hero — treino PKZ</figure>
+
+            <header class="hub-hero-conteudo">
+                <p class="hub-eyebrow">Alta performance esportiva</p>
+                <h1 class="hub-titulo">Treino de <span>alta performance</span> para todas idades.</h1>
+                <p>Do jovem atleta ao adulto que busca resultado. Escolha o seu caminho.</p>
+                <a class="hub-link hub-btn hub-btn-lilas" href="#escolha">Escolha sua jornada &darr;</a>
+            </header>
+
+            <!-- Controles do slider: só visual por enquanto (troca de foto via JavaScript) -->
+            <div class="hub-slider" aria-hidden="true">
+                <span class="hub-slider-seta">&lsaquo;</span>
+                <span class="hub-slider-traco ativo"></span>
+                <span class="hub-slider-traco"></span>
+                <span class="hub-slider-traco"></span>
+                <span class="hub-slider-traco"></span>
+                <span class="hub-slider-seta">&rsaquo;</span>
+            </div>
+        </section>
+
+        <hr class="hub-divisor">
+
+        <!-- ESCOLHA SUA JORNADA: as duas marcas -->
+        <section class="hub-secao hub-container" id="escolha">
+            <header>
+                <p class="hub-eyebrow">Escolha sua jornada</p>
+                <h2 class="hub-subtitulo">Duas marcas.<br>Um mesmo padrão de excelência.</h2>
+                <hr class="hub-traco">
+            </header>
+
+            <div class="hub-marcas">
+                <!-- Playmakerz -->
+                <article class="hub-marca">
+                    <figure class="hub-foto">
+                        <span class="hub-selo selo-pkz">Até 17 anos</span>
+                        Foto — jovens atletas PKZ
+                    </figure>
+                    <img class="hub-marca-logo" src="../img/logo-playmakerz.png" alt="Playmakerz">
+                    <p>Formação e alta performance para jovens atletas.</p>
+                    <a class="hub-link hub-btn hub-btn-pkz" href="../pkz/index.html">Acessar PKZ &rarr;</a>
+                </article>
+
+                <!-- One to One -->
+                <article class="hub-marca">
+                    <figure class="hub-foto">
+                        <span class="hub-selo selo-one">Adultos</span>
+                        Foto — treino One to One
+                    </figure>
+                    <img class="hub-marca-logo" src="../img/logo-one-to-one.png" alt="One to One Studio">
+                    <p>Treino individualizado para adultos. Um profissional dedicado a você.</p>
+                    <a class="hub-link hub-btn hub-btn-one" href="../one-to-one/index.html">Acessar One to One &rarr;</a>
+                </article>
+            </div>
+        </section>
+
+        <hr class="hub-divisor">
+
+        <!-- galeria de vídeos -->
+        <section class="hub-secao hub-container" id="videos">
+            <header>
+                <p class="hub-eyebrow">Em vídeo</p>
+                <h2 class="hub-subtitulo">Veja a gente em ação</h2>
+            </header>
+
+            <!-- Vídeo principal: trocar o placeholder por
+                 <video controls poster="img/capa.webp">
+                     <source src="videos/institucional.mp4" type="video/mp4">
+                     Seu browser não suporta vídeo.
+                 </video> -->
+            <figure class="hub-foto hub-video-principal">
+                <span class="hub-play">&#9654;</span>
+                <figcaption class="hub-video-legenda">Um dia de<br>treino</figcaption>
+            </figure>
+
+            <!-- 3 vídeos menores -->
+            <div class="hub-videos">
+                <figure class="hub-foto hub-video">
+                    <span class="hub-play">&#9654;</span>
+                    Vídeo — capa PKZ
+                    <figcaption>
+                        <span class="hub-video-tag">PKZ</span>
+                        <span class="hub-video-titulo">Preparação de atletas</span>
+                    </figcaption>
+                </figure>
+                <figure class="hub-foto hub-video">
+                    <span class="hub-play">&#9654;</span>
+                    Vídeo — capa One to One
+                    <figcaption>
+                        <span class="hub-video-tag">One to One</span>
+                        <span class="hub-video-titulo">Treino individual</span>
+                    </figcaption>
+                </figure>
+                <figure class="hub-foto hub-video">
+                    <span class="hub-play">&#9654;</span>
+                    Vídeo — capa bastidores
+                    <figcaption>
+                        <span class="hub-video-tag">PKZ · One to One</span>
+                        <span class="hub-video-titulo">Bastidores</span>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
