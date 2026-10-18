@@ -1,1 +1,142 @@
+/* =====================================================================
+   2. SOBRE + TREINOS — Igor
+   Seções #sobre e #treinos de one-to-one/index.html e pkz/index.html
+   ===================================================================== */
 
+/* ----- 2.1 Sobre nós ----- */
+.sobre-titulo {
+  font-size: 88px;
+  margin-bottom: 40px;
+}
+
+.sobre-texto p {
+  font-size: 21px;
+  line-height: 1.95;
+  color: var(--cor-texto-suave);
+  margin-bottom: 4px;
+}
+
+/* Link "COMPARAR OS DOIS PROGRAMAS →" (leva para a escolha no Hub) */
+.link-seta {
+  display: inline-block;
+  margin-top: 56px;
+  font-family: var(--fonte-titulo);
+  font-weight: 900;
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cor-azul);
+}
+
+.link-seta:hover {
+  color: var(--cor-texto);
+}
+
+.sobre-foto {
+  height: 500px;
+}
+
+/* ----- 2.2 Informações sobre treinos ----- */
+.treinos-intro {
+  max-width: 680px;
+  margin-bottom: 64px;
+}
+
+/* 3 cards lado a lado */
+.treinos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* Tablets e celulares: um card embaixo do outro */
+@media (max-width: 1200px) {
+  .treinos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card em coluna: texto empurrado para baixo com margin-top: auto */
+.treino-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 340px;
+  padding: 48px 44px;
+}
+
+.treino-card .eyebrow {
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.treino-card h2 {
+  font-family: var(--fonte-titulo);
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/*
+ * Só o parágrafo logo depois do título (combinador "+"),
+ * para não pegar o eyebrow do card.
+ */
+.treino-card h2 + p {
+  margin-top: auto;
+  padding-top: 32px;
+  font-size: 19px;
+  line-height: 1.8;
+  color: var(--cor-texto-suave);
+}
+
+@media (max-width: 768px) {
+  .sobre-titulo {
+    font-size: 44px;
+  }
+
+  /* Cards mais compactos no celular para acomodar palavras longas. */
+  .treino-card {
+    min-height: auto;
+    padding: 32px 24px;
+  }
+
+  .treino-card h2,
+  .pkz .treino-card h2 {
+    font-size: 20px;
+    letter-spacing: 0.02em;
+  }
+}
+
+/* ----- 2.3 Sobre Playmakerz ----- */
+.pkz .sobre-titulo {
+  font-size: 88px;
+}
+
+.pkz .sobre-texto p {
+  line-height: 2.2;
+  margin-bottom: 20px;
+}
+
+.pkz .link-seta {
+  margin-top: 24px;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.25em;
+}
+
+/* ----- 2.4 Treinos Playmakerz: texto logo abaixo do título ----- */
+.pkz .treino-card {
+  min-height: 300px;
+}
+
+.pkz .treino-card h2 {
+  font-weight: 600;
+  font-size: 30px;
+  letter-spacing: 0.04em;
+}
+
+.pkz .treino-card h2 + p {
+  margin-top: 0;
+  padding-top: 16px;
+}
