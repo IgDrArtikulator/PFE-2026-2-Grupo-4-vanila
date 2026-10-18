@@ -407,3 +407,131 @@
     font-size: 28px;
   }
 }
+
+
+/* ----- 5.6 Agendamento Playmakerz ----- */
+/* Versão mais compacta: título colado no texto, legenda no meio da linha
+   "SEG, 22 DE SETEMBRO", caixas menores e números em fonte sem serifa. */
+.pkz .agenda-titulo {
+  margin-bottom: 16px;
+}
+
+.pkz .agenda-texto {
+  max-width: none;
+  margin-bottom: 32px;
+}
+
+.pkz .dias {
+  margin-bottom: 36px;
+}
+
+.pkz .dia span {
+  height: 92px;
+  font-family: Arial, sans-serif;
+  color: #a8a8d0;
+  border-color: #2a2a6a;
+}
+
+.pkz .dia strong {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.1;
+}
+
+.pkz .dia-semana {
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.pkz .agenda-subtitulo {
+  margin-bottom: 16px;
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+}
+
+/* Legenda (Livre / Ocupado) dentro da linha do subtítulo */
+.pkz .agenda-subtitulo .legenda {
+  margin-top: 0;
+  gap: 34px;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: none;
+  color: var(--cor-texto-suave);
+}
+
+.pkz .legenda-ocupado {
+  background-color: #1a1a4a;
+}
+
+.pkz .horarios {
+  gap: 12px 16px;
+}
+
+.pkz .horario span {
+  height: 52px;
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.pkz .horario-ocupado span {
+  background-color: #07073a;
+  border-color: #07073a;
+  color: #3c3c78;
+}
+
+/* Painel de confirmação */
+.pkz .confirmar {
+  padding: 36px 40px 28px;
+  background-color: var(--cor-superficie);
+  border-color: #2a2a6a;
+}
+
+.pkz .confirmar-rotulo {
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.pkz .confirmar-titulo {
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  font-size: 38px;
+  margin-bottom: 24px;
+}
+
+.pkz .confirmar-fechar {
+  top: 28px;
+  right: 32px;
+  width: 32px;
+  height: 32px;
+  border-color: #3a3a7a;
+}
+
+.pkz .confirmar-form {
+  gap: 12px;
+}
+
+.pkz .confirmar-form .campo {
+  height: 60px;
+  background-color: var(--cor-superficie);
+  border-color: #2a2a6a;
+}
+
+/* Botão ENVIAR dourado, mais estreito e centralizado */
+.pkz .btn-enviar {
+  align-self: center;
+  width: 260px;
+  margin-top: 16px;
+  font-family: var(--fonte-condensada);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.3em;
+}
+
+@media (max-width: 768px) {
+  .pkz .agenda-subtitulo {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
