@@ -78,5 +78,136 @@
     </article>
   </div>
 </section>
+
+<!-- ===== AGENDAMENTO PLAYMAKERZ — Lucas =====
+     Mesma lógica da One to One: radios dentro de labels, selecionado pelo
+     CSS (:checked + span), ocupados com disabled. Diferença do design:
+     a legenda Livre/Ocupado fica na linha do subtítulo.
+     O painel da direita será atualizado com JavaScript depois. -->
+<section class="pagina" id="agendamento">
+  <header>
+    <p class="eyebrow">Play Makerz · Agendamento</p>
+    <h2 class="titulo-pagina agenda-titulo">Escolha dia e horário</h2>
+    <p class="texto-lead agenda-texto">Aula experimental gratuita. Horários em cinza já estão ocupados — selecione um horário livre para concluir o agendamento.</p>
+  </header>
+
+  <div class="duas-colunas agenda-grid">
+    <!-- Coluna esquerda: dias + horários -->
+    <div>
+      <fieldset class="agenda-grupo">
+        <legend class="label-oculta">Escolha o dia</legend>
+        <div class="dias">
+          <label class="dia">
+            <input type="radio" name="dia" value="2026-09-22" checked>
+            <span><abbr class="dia-semana" title="Segunda-feira">Seg</abbr><strong>22</strong><abbr title="setembro">Set</abbr></span>
+          </label>
+          <label class="dia">
+            <input type="radio" name="dia" value="2026-09-23">
+            <span><abbr class="dia-semana" title="Terça-feira">Ter</abbr><strong>23</strong><abbr title="setembro">Set</abbr></span>
+          </label>
+          <label class="dia">
+            <input type="radio" name="dia" value="2026-09-24">
+            <span><abbr class="dia-semana" title="Quarta-feira">Qua</abbr><strong>24</strong><abbr title="setembro">Set</abbr></span>
+          </label>
+          <label class="dia">
+            <input type="radio" name="dia" value="2026-09-25">
+            <span><abbr class="dia-semana" title="Quinta-feira">Qui</abbr><strong>25</strong><abbr title="setembro">Set</abbr></span>
+          </label>
+          <label class="dia">
+            <input type="radio" name="dia" value="2026-09-26">
+            <span><abbr class="dia-semana" title="Sexta-feira">Sex</abbr><strong>26</strong><abbr title="setembro">Set</abbr></span>
+          </label>
+          <label class="dia">
+            <input type="radio" name="dia" value="2026-09-27">
+            <span><abbr class="dia-semana" title="Sábado">Sáb</abbr><strong>27</strong><abbr title="setembro">Set</abbr></span>
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset class="agenda-grupo">
+        <legend class="label-oculta">Escolha o horário</legend>
+        <header class="agenda-subtitulo">
+          <h2><time datetime="2026-09-22">Seg, 22 de setembro</time></h2>
+          <ul class="legenda">
+            <li><span class="legenda-cor legenda-livre"></span>Livre</li>
+            <li><span class="legenda-cor legenda-ocupado"></span>Ocupado</li>
+          </ul>
+          <span>7 horários livres</span>
+        </header>
+        <div class="horarios">
+          <label class="horario horario-ocupado">
+            <input type="radio" name="horario" value="07:00" disabled>
+            <span>07:00</span>
+          </label>
+          <label class="horario horario-livre">
+            <input type="radio" name="horario" value="08:00" checked>
+            <span>08:00</span>
+          </label>
+          <label class="horario horario-ocupado">
+            <input type="radio" name="horario" value="09:00" disabled>
+            <span>09:00</span>
+          </label>
+          <label class="horario horario-ocupado">
+            <input type="radio" name="horario" value="10:00" disabled>
+            <span>10:00</span>
+          </label>
+          <label class="horario horario-livre">
+            <input type="radio" name="horario" value="11:00">
+            <span>11:00</span>
+          </label>
+          <label class="horario horario-livre">
+            <input type="radio" name="horario" value="12:00">
+            <span>12:00</span>
+          </label>
+          <label class="horario horario-livre">
+            <input type="radio" name="horario" value="15:00">
+            <span>15:00</span>
+          </label>
+          <label class="horario horario-ocupado">
+            <input type="radio" name="horario" value="16:00" disabled>
+            <span>16:00</span>
+          </label>
+          <label class="horario horario-livre">
+            <input type="radio" name="horario" value="17:00">
+            <span>17:00</span>
+          </label>
+          <label class="horario horario-ocupado">
+            <input type="radio" name="horario" value="18:00" disabled>
+            <span>18:00</span>
+          </label>
+          <label class="horario horario-livre">
+            <input type="radio" name="horario" value="19:00">
+            <span>19:00</span>
+          </label>
+          <label class="horario horario-livre">
+            <input type="radio" name="horario" value="20:00">
+            <span>20:00</span>
+          </label>
+        </div>
+      </fieldset>
+    </div>
+
+    <!-- Coluna direita: painel de confirmação -->
+    <aside class="card confirmar">
+      <p class="confirmar-rotulo">Confirmar agendamento</p>
+      <p class="confirmar-titulo"><time datetime="2026-09-22T08:00">08:00 · Seg 22/09</time></p>
+      <!-- X volta para Planos -->
+      <a class="confirmar-fechar" href="#planos" aria-label="Fechar">&times;</a>
+
+      <form class="confirmar-form" action="#inicio" method="post">
+        <label class="label-oculta" for="pkz-ag-responsavel">Nome do responsável</label>
+        <input class="campo" type="text" id="pkz-ag-responsavel" name="responsavel" placeholder="Nome do responsável" required>
+
+        <label class="label-oculta" for="pkz-ag-email">E-mail</label>
+        <input class="campo" type="email" id="pkz-ag-email" name="email" placeholder="E-mail" required>
+
+        <label class="label-oculta" for="pkz-ag-whatsapp">WhatsApp</label>
+        <input class="campo" type="tel" id="pkz-ag-whatsapp" name="whatsapp" placeholder="WhatsApp" required>
+
+        <button class="btn btn-primario btn-enviar" type="submit">Enviar</button>
+      </form>
+    </aside>
+  </div>
+</section>
 </body>
 </html>
