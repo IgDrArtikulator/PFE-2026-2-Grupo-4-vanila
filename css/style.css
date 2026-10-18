@@ -140,3 +140,189 @@
   margin-top: 0;
   padding-top: 16px;
 }
+
+/* =====================================================================
+   5. AGENDAMENTO — Lucas
+   Seção #agendamento de one-to-one/index.html e pkz/index.html
+   Só HTML + CSS por enquanto: dias e horários são inputs radio.
+   O item marcado fica azul com o seletor :checked + combinador "+"
+   (input:checked + span). A troca do horário no painel da direita
+   vai ser feita com JavaScript quando o professor ensinar.
+   ===================================================================== */
+.agenda-texto {
+  max-width: 720px;
+  margin-bottom: 40px;
+}
+
+.agenda-grid {
+  align-items: start;
+}
+
+/* fieldset sem borda nem espaçamento padrão */
+.agenda-grupo {
+  border: 0;
+}
+
+/* ----- 5.1 Dias da semana ----- */
+.dias {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+/* label envolve o input (pareamento por encapsulamento) */
+.dia {
+  position: relative;
+  cursor: pointer;
+}
+
+/* O radio fica invisível; quem aparece é o <span> do lado */
+.dia input,
+.horario input {
+  position: absolute;
+  opacity: 0;
+}
+
+.dia span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 112px;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  font-family: var(--fonte-titulo);
+  color: var(--cor-texto-apagado);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.dia strong {
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 1.2;
+  color: var(--cor-texto);
+}
+
+/* Dia da semana abreviado (<abbr>): o nome completo fica no title */
+.dia-semana {
+  font-weight: 800;
+  font-size: 13px;
+}
+
+/* <abbr> vem sublinhado por padrão; aqui tiramos */
+.dia abbr {
+  text-decoration: none;
+}
+
+/* Dia selecionado: fundo azul, texto preto */
+.dia input:checked + span {
+  background-color: var(--cor-azul);
+  border-color: var(--cor-azul);
+  color: #0b0b0b;
+}
+
+.dia input:checked + span strong {
+  color: #0b0b0b;
+}
+
+/* ----- 5.2 Cabeçalho da lista de horários ----- */
+.agenda-subtitulo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-family: var(--fonte-titulo);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.agenda-subtitulo h2 {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.agenda-subtitulo span {
+  font-size: 14px;
+  color: var(--cor-azul);
+}
+
+/* ----- 5.3 Grade de horários (3 colunas) ----- */
+.horarios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.horario {
+  position: relative;
+  cursor: pointer;
+}
+
+.horario span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  border-radius: 10px;
+  font-family: var(--fonte-titulo);
+  font-weight: 800;
+  font-size: 20px;
+}
+
+/* Horário livre: azul bem escuro */
+.horario-livre span {
+  background-color: var(--cor-azul-escuro);
+  border: 1px solid var(--cor-azul-borda);
+  color: var(--cor-texto);
+}
+
+/* Horário ocupado: cinza e riscado */
+.horario-ocupado {
+  cursor: not-allowed;
+}
+
+.horario-ocupado span {
+  background-color: #1a1a1a;
+  border: 1px solid #1a1a1a;
+  color: #4a4a4a;
+  text-decoration: line-through;
+}
+
+/* Horário selecionado: azul cheio */
+.horario input:checked + span {
+  background-color: var(--cor-azul);
+  border-color: var(--cor-azul);
+  color: #0b0b0b;
+}
+
+/* ----- 5.4 Legenda (Livre / Ocupado) ----- */
+.legenda {
+  display: flex;
+  gap: 36px;
+  margin-top: 32px;
+  font-size: 16px;
+  color: var(--cor-texto-apagado);
+}
+
+.legenda li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legenda-cor {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+}
+
+.legenda-livre {
+  background-color: var(--cor-azul-escuro);
+  border: 1px solid var(--cor-azul-borda);
+}
+
+.legenda-ocupado {
+  background-color: #2a2a2a;
+}
