@@ -636,6 +636,43 @@
   }
 }
 
+/* =====================================================================
+   6. GALERIA — Rodrigo
+   Seção #galeria de one-to-one/index.html e pkz/index.html
+===================================================================== */
+
+/* ----- 6.1 Galeria geral ----- */
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.galeria-item {
+    height: 400px;
+}
+
+/* ----- Layout responsivo ----- */
+
+@media (max-width: 768px) {
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .galeria-item {
+        height: 200px;
+    }
+}
+
+/* ----- 6.2 Galeria Play Makerz -----
+   Mesmas classes; as cores vêm das variáveis do tema .pkz.
+*/
+
+.pkz .galeria-item {
+    background-color: var(--cor-placeholder);
+}
+
 
 
 
