@@ -1,11 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playmakerz | Treino de alta performance</title>
+
+  <!-- Google Fonts: Barlow Condensed (títulos) e Barlow (texto); display=swap = boa prática -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (ícones da seção Contato), versão gratuita via CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- CSS único do projeto (pasta css, na pasta principal) -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+
+<body class="pkz">
+
+  <!-- ===== HEADER (nav) ===== -->
+  <header class="cabecalho">
+    <a class="logo" href="#inicio">
+      <img src="img-pkz/logo-playmakerz.png" alt="Playmakerz">
+    </a>
+
+    <nav aria-label="Navegação principal">
+      <ul class="cabecalho-links">
+        <li>
+          <a href="#inicio">Playmakerz</a>
+        </li>
+        <li>
+          <a href="one-to-one/index.html">One to One</a>
+        </li>
+        <li>
+          <a href="hub/index.html">Hub</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+  <!-- ===== HOME PLAYMAKERZ — Arthur ===== -->
+<section class="pagina" id="inicio">
+  <div class="duas-colunas home-hero">
+
+    <header>
+      <p class="eyebrow">Treino individual · Alta performance</p>
+      <h1 class="titulo-pagina home-titulo">Formando pequenos atletas com grandes sonhos</h1>
+      <p class="texto-lead">
+        Seu desenvolvimento atlético em programas por idade e modalidade, conduzidos individualmente por um profissional dedicado.
+      </p>
+
+      <div class="home-botoes">
+        <a class="btn btn-primario btn-pesado" href="#planos">Aula grátis &rarr;</a>
+        <a class="btn btn-contorno" href="#agendamento">Agendar avaliação</a>
+      </div>
+    </header>
+
+    <!-- Placeholder da foto: colocar <img src="img/pkz-hero.webp" alt="..."> dentro desta <figure> -->
+    <figure class="placeholder home-foto">Foto do treino (hero)</figure>
+
+  </div>
+</section>
+
+
+
 <!-- ===== SOBRE NÓS PLAYMAKERZ — Igor ===== -->
 <section class="pagina" id="sobre">
   <p class="eyebrow">Play Makerz · Sobre</p>
@@ -26,7 +86,7 @@
       </p>
 
       <!-- Leva para a seção "Escolha sua jornada" do Hub -->
-      <a class="link-seta" href="../hub/index.html#escolha">
+      <a class="link-seta" href="hub/index.html#escolha">
         Comparar os dois programas &rarr;
       </a>
     </article>
@@ -37,6 +97,7 @@
     </figure>
   </div>
 </section>
+
 
 <!-- ===== INFORMAÇÕES SOBRE TREINOS PLAYMAKERZ — Igor ===== -->
 <section class="pagina" id="treinos">
