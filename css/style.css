@@ -1,3 +1,103 @@
+ /* ===1. HOME — Arthur === */
+
+/* Coluna do texto um pouco mais larga que a da foto (3 partes x 2 partes) */
+.home-hero {
+  grid-template-columns: 3fr 2fr;
+  align-items: center;
+}
+
+.home-hero .eyebrow {
+  font-size: 15px;
+  letter-spacing: 0.35em;
+}
+
+/* clamp(mínimo, ideal, máximo): o título acompanha a largura da tela
+   (5.2vw = 5,2% da largura) sem passar de 96px nem ficar menor que 56px */
+.home-titulo {
+  font-size: clamp(56px, 5.2vw, 96px);
+  margin-bottom: 28px;
+}
+
+.home-hero .texto-lead {
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+.home-botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* "AULA EXPERIMENTAL": botão menor com Archivo */
+.home-botoes .btn-pesado {
+  height: 64px;
+  padding: 0 28px;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+}
+
+/* "AGENDAR AVALIAÇÃO": contorno com DM Sans espaçada */
+.home-botoes .btn-contorno {
+  height: 64px;
+  padding: 0 48px;
+  font-family: var(--fonte-texto);
+  font-size: 17px;
+  letter-spacing: 0.15em;
+}
+
+.home-foto {
+  height: 520px;
+}
+
+/* Tablets: texto em cima, foto embaixo */
+@media (max-width: 1100px) {
+  .home-hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-titulo {
+    font-size: 44px;
+  }
+
+  .home-foto {
+    height: 280px;
+  }
+}
+
+/* ----- 1.2 Home Playmakerz ----- */
+.pkz .home-titulo {
+  font-size: 100px;
+  line-height: 1.04;
+}
+
+.pkz .home-hero .eyebrow {
+  font-size: 13px;
+}
+
+/* "AULA GRÁTIS →" dourado */
+.pkz .home-botoes .btn-pesado {
+  height: 60px;
+  padding: 0 40px;
+  font-size: 18px;
+}
+
+/* "AGENDAR AVALIAÇÃO"  */
+.pkz .home-botoes .btn-contorno {
+  height: 60px;
+  padding: 0 40px;
+  font-family: var(--fonte-condensada);
+}
+
+@media (max-width: 768px) {
+  .pkz .home-titulo {
+    font-size: 48px;
+  }
+}
+
+
 /* =====================================================================
    2. SOBRE + TREINOS — Igor
    Seções #sobre e #treinos de one-to-one/index.html e pkz/index.html
