@@ -242,6 +242,254 @@
 }
 
 /* =====================================================================
+   4. CONTATO + CADASTRO — Guilherme
+   Seções #contato e #cadastro de one-to-one/index.html e pkz/index.html
+   ===================================================================== */
+
+/* ----- 4.1 Contate-nos ----- */
+.contato-titulo {
+  margin-bottom: 48px;
+}
+
+/* Espaço entre o texto de introdução e os cards de contato */
+.contato-titulo + .texto-lead {
+  margin-bottom: 56px;
+}
+
+.contato-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Card clicável de WhatsApp / Instagram */
+.contato-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 34px 40px 34px 32px;
+}
+
+.contato-card:hover {
+  border-color: var(--cor-azul);
+}
+
+.contato-icone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 56px;
+  height: 56px;
+  font-size: 32px;
+  color: #ffffff;
+}
+
+.icone-whatsapp {
+  background-color: #25d366;
+  border-radius: 50%;
+}
+
+.icone-instagram {
+  background-color: #e1306c;
+  border-radius: 12px;
+}
+
+/* Rótulo em cima */
+.contato-rotulo {
+  display: block;
+  font-family: var(--fonte-condensada);
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--cor-azul);
+}
+
+/* Valor embaixo */
+.contato-valor {
+  font-family: var(--fonte-condensada);
+  font-size: 30px;
+  line-height: 1.3;
+}
+
+/* Seta "→" empurrada para a direita */
+.contato-seta {
+  margin-left: auto;
+  font-size: 22px;
+  color: var(--cor-azul);
+}
+
+/* Card da direita: Atendimento + Unidade */
+.atendimento-card {
+  padding: 48px;
+}
+
+.atendimento-card .eyebrow {
+  font-family: var(--fonte-titulo);
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 0.35em;
+  margin-bottom: 10px;
+}
+
+/* Parágrafo logo depois do eyebrow "ATENDIMENTO" */
+.atendimento-card .eyebrow + p {
+  font-size: 18px;
+  line-height: 1.85;
+  color: var(--cor-texto-suave);
+}
+
+.atendimento-unidade {
+  font-family: var(--fonte-titulo);
+  font-weight: 900;
+  font-size: 26px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 24px;
+}
+
+.atendimento-card address {
+  font-style: normal;
+  font-size: 18px;
+  color: var(--cor-texto-suave);
+  margin-bottom: 32px;
+}
+
+.atendimento-botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.atendimento-botoes .btn {
+  height: 60px;
+  padding: 0 28px;
+  font-size: 15px;
+}
+
+.atendimento-botoes .btn-primario {
+  padding: 0 38px;
+}
+
+/* ----- 4.2 Cadastro de alunos ----- */
+.cadastro-texto {
+  max-width: 540px;
+}
+
+.cadastro-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 560px;
+}
+
+.cadastro-botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 12px;
+}
+
+/* fieldset sem a borda padrão do navegador */
+.cadastro-form fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 0;
+}
+
+/* ----- 4.3 Contato Playmakerz: 3 cards em linha ----- */
+.contato-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* min-width: 0 deixa o item da grade encolher (evita que e-mail comprido estoure) */
+.contato-grid li {
+  min-width: 0;
+}
+
+/* Cada card ocupa a altura toda do <li> da grade */
+.pkz .contato-card {
+  height: 100%;
+  padding: 44px 36px;
+}
+
+/* E-mail comprido quebra a linha em vez de sair do card */
+.pkz .contato-valor {
+  font-size: 24px;
+  overflow-wrap: anywhere;
+}
+
+/* Ícone de e-mail: círculo dourado */
+.icone-email {
+  background-color: var(--cor-azul);
+  border-radius: 50%;
+  font-size: 22px;
+  color: #01012e;
+}
+
+/* ----- 4.4 Cadastro Playmakerz ----- */
+.pkz .cadastro-texto {
+  max-width: 560px;
+}
+
+.pkz .cadastro-form fieldset {
+  gap: 20px;
+}
+
+.pkz .cadastro-form .campo {
+  height: 60px;
+}
+
+.pkz .cadastro-botoes {
+  margin-top: 10px;
+}
+
+.pkz .cadastro-botoes .btn {
+  height: 60px;
+  padding: 0 40px;
+}
+
+/* ----- Responsividade / Media Queries ----- */
+
+/* Tablets e celulares: um canal embaixo do outro */
+@media (max-width: 1200px) {
+  .contato-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Cards de contato menores no celular para caber na tela */
+  .contato-card,
+  .pkz .contato-card {
+    gap: 16px;
+    padding: 24px 20px;
+  }
+
+  .contato-icone {
+    flex: 0 0 44px;
+    height: 44px;
+    font-size: 24px;
+  }
+
+  .contato-valor,
+  .pkz .contato-valor {
+    font-size: 18px;
+  }
+
+  .atendimento-card {
+    padding: 28px 22px;
+  }
+
+  .atendimento-unidade {
+    font-size: 20px;
+  }
+}
+
+/* =====================================================================
    5. AGENDAMENTO — Lucas
    Seção #agendamento de one-to-one/index.html e pkz/index.html
    Só HTML + CSS por enquanto: dias e horários são inputs radio.
