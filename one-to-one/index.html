@@ -94,6 +94,42 @@
   <p class="eyebrow">One to One · Treinos</p>
 
   <h2 class="titulo-pagina">Informações sobre treinos</h2>
+
+  <p>
+    Sessões individuais, com programa montado a partir da sua avaliação
+    e necessidades.
+  </p>
+
+  <div class="treinos-cards">
+    <article class="treino-card">
+      <p class="eyebrow">Avaliação</p>
+      <h3>Ponto de partida</h3>
+      <p>
+        Primeira sessão para entender histórico, rotina e objetivo
+        de condicionamento.
+      </p>
+    </article>
+
+    <article class="treino-card">
+      <p class="eyebrow">Programa</p>
+      <h3>Melhora do seu condicionamento físico</h3>
+      <p>
+        Força, mobilidade e capacidade aeróbica de acordo
+        com seu objetivo.
+      </p>
+    </article>
+
+    <article class="treino-card">
+      <p class="eyebrow">Acompanhamento</p>
+      <h3>Um profissional dedicado ao aluno</h3>
+      <p>
+        Horários flexíveis, evolução registrada e ajuste do programa
+        sessão a sessão.
+      </p>
+    </article>
+  </div>
+</section>
+
 <!-- ===== PLANOS / AULA GRATUITA EXPERIMENTAL — Mateus =====
      Página toda centralizada (flex em coluna) -->
 <section class="pagina planos" id="planos">
@@ -149,41 +185,6 @@
       src="https://www.google.com/maps?q=Av+Armando+Lombardi+949+Barra+da+Tijuca+Rio+de+Janeiro&output=embed"
       title="Mapa da Unidade 1 - Armando Lombardi"
       loading="lazy"></iframe>
-  </div>
-</section>
-
-  <p>
-    Sessões individuais, com programa montado a partir da sua avaliação
-    e necessidades.
-  </p>
-
-  <div class="treinos-cards">
-    <article class="treino-card">
-      <p class="eyebrow">Avaliação</p>
-      <h3>Ponto de partida</h3>
-      <p>
-        Primeira sessão para entender histórico, rotina e objetivo
-        de condicionamento.
-      </p>
-    </article>
-
-    <article class="treino-card">
-      <p class="eyebrow">Programa</p>
-      <h3>Melhora do seu condicionamento físico</h3>
-      <p>
-        Força, mobilidade e capacidade aeróbica de acordo
-        com seu objetivo.
-      </p>
-    </article>
-
-    <article class="treino-card">
-      <p class="eyebrow">Acompanhamento</p>
-      <h3>Um profissional dedicado ao aluno</h3>
-      <p>
-        Horários flexíveis, evolução registrada e ajuste do programa
-        sessão a sessão.
-      </p>
-    </article>
   </div>
 </section>
 
@@ -256,7 +257,7 @@
       <h2 class="atendimento-unidade">Unidade 1 - Armando Lombardi</h2>
       <address>Av Armando Lombardi, 949 - Loja G - Horários a Combinar</address>
       <div class="atendimento-botoes">
-        <a class="btn btn-primario btn-pesado" href="#cadastro">Fazer cadastro</a>
+        <a class="btn btn-primario btn-pesado" href="#agendamento">Fazer cadastro</a>
         <a class="btn btn-contorno btn-pesado" href="#unidades">Ver unidades</a>
       </div>
     </article>
@@ -282,27 +283,27 @@
         <legend class="label-oculta">Escolha o dia</legend>
         <div class="dias">
           <label class="dia">
-            <input type="radio" name="dia" value="2026-09-22" checked>
+            <input type="radio" name="dia" form="form-agendamento" value="2026-09-22" checked>
             <span><abbr class="dia-semana" title="Segunda-feira">Seg</abbr><strong>22</strong><abbr title="setembro">Set</abbr></span>
           </label>
           <label class="dia">
-            <input type="radio" name="dia" value="2026-09-23">
+            <input type="radio" name="dia" form="form-agendamento" value="2026-09-23">
             <span><abbr class="dia-semana" title="Terça-feira">Ter</abbr><strong>23</strong><abbr title="setembro">Set</abbr></span>
           </label>
           <label class="dia">
-            <input type="radio" name="dia" value="2026-09-24">
+            <input type="radio" name="dia" form="form-agendamento" value="2026-09-24">
             <span><abbr class="dia-semana" title="Quarta-feira">Qua</abbr><strong>24</strong><abbr title="setembro">Set</abbr></span>
           </label>
           <label class="dia">
-            <input type="radio" name="dia" value="2026-09-25">
+            <input type="radio" name="dia" form="form-agendamento" value="2026-09-25">
             <span><abbr class="dia-semana" title="Quinta-feira">Qui</abbr><strong>25</strong><abbr title="setembro">Set</abbr></span>
           </label>
           <label class="dia">
-            <input type="radio" name="dia" value="2026-09-26">
+            <input type="radio" name="dia" form="form-agendamento" value="2026-09-26">
             <span><abbr class="dia-semana" title="Sexta-feira">Sex</abbr><strong>26</strong><abbr title="setembro">Set</abbr></span>
           </label>
           <label class="dia">
-            <input type="radio" name="dia" value="2026-09-27">
+            <input type="radio" name="dia" form="form-agendamento" value="2026-09-27">
             <span><abbr class="dia-semana" title="Sábado">Sáb</abbr><strong>27</strong><abbr title="setembro">Set</abbr></span>
           </label>
         </div>
@@ -316,51 +317,51 @@
         </header>
         <div class="horarios">
           <label class="horario horario-ocupado">
-            <input type="radio" name="horario" value="07:00" disabled>
+            <input type="radio" name="horario" form="form-agendamento" value="07:00" disabled>
             <span>07:00</span>
           </label>
           <label class="horario horario-livre">
-            <input type="radio" name="horario" value="08:00" checked>
+            <input type="radio" name="horario" form="form-agendamento" value="08:00" checked>
             <span>08:00</span>
           </label>
           <label class="horario horario-ocupado">
-            <input type="radio" name="horario" value="09:00" disabled>
+            <input type="radio" name="horario" form="form-agendamento" value="09:00" disabled>
             <span>09:00</span>
           </label>
           <label class="horario horario-ocupado">
-            <input type="radio" name="horario" value="10:00" disabled>
+            <input type="radio" name="horario" form="form-agendamento" value="10:00" disabled>
             <span>10:00</span>
           </label>
           <label class="horario horario-livre">
-            <input type="radio" name="horario" value="11:00">
+            <input type="radio" name="horario" form="form-agendamento" value="11:00">
             <span>11:00</span>
           </label>
           <label class="horario horario-livre">
-            <input type="radio" name="horario" value="12:00">
+            <input type="radio" name="horario" form="form-agendamento" value="12:00">
             <span>12:00</span>
           </label>
           <label class="horario horario-livre">
-            <input type="radio" name="horario" value="15:00">
+            <input type="radio" name="horario" form="form-agendamento" value="15:00">
             <span>15:00</span>
           </label>
           <label class="horario horario-ocupado">
-            <input type="radio" name="horario" value="16:00" disabled>
+            <input type="radio" name="horario" form="form-agendamento" value="16:00" disabled>
             <span>16:00</span>
           </label>
           <label class="horario horario-livre">
-            <input type="radio" name="horario" value="17:00">
+            <input type="radio" name="horario" form="form-agendamento" value="17:00">
             <span>17:00</span>
           </label>
           <label class="horario horario-ocupado">
-            <input type="radio" name="horario" value="18:00" disabled>
+            <input type="radio" name="horario" form="form-agendamento" value="18:00" disabled>
             <span>18:00</span>
           </label>
           <label class="horario horario-livre">
-            <input type="radio" name="horario" value="19:00">
+            <input type="radio" name="horario" form="form-agendamento" value="19:00">
             <span>19:00</span>
           </label>
           <label class="horario horario-livre">
-            <input type="radio" name="horario" value="20:00">
+            <input type="radio" name="horario" form="form-agendamento" value="20:00">
             <span>20:00</span>
           </label>
         </div>
@@ -379,7 +380,7 @@
       <!-- X volta para Planos -->
       <a class="confirmar-fechar" href="#planos" aria-label="Fechar">&times;</a>
 
-      <form class="confirmar-form" action="#inicio" method="post">
+      <form class="confirmar-form" id="form-agendamento" action="#inicio" method="get">
         <label class="label-oculta" for="ag-nome">Nome completo</label>
         <input class="campo" type="text" id="ag-nome" name="nome" placeholder="Nome completo" required>
 
@@ -423,7 +424,7 @@
           <a href="#contato">Contato</a>
         </li>
         <li>
-          <a href="hub/index.html">Hub PKZ</a>
+          <a href="../hub/index.html">Hub PKZ</a>
         </li>
       </ul>
     </nav>

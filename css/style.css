@@ -588,7 +588,7 @@ ol {
 }
 
 /* 3 cards lado a lado */
-.treinos-grid {
+.treinos-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
@@ -596,7 +596,7 @@ ol {
 
 /* Tablets e celulares: um card embaixo do outro */
 @media (max-width: 1200px) {
-  .treinos-grid {
+  .treinos-cards {
     grid-template-columns: 1fr;
   }
 }
