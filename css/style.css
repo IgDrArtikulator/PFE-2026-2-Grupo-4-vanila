@@ -168,7 +168,381 @@ ol {
   min-width: 0;
 }
 
+/* ---------- 0.5 Botões ---------- */
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  padding: 0 44px;
+  border-radius: 999px;   /* formato pílula */
+  font-family: var(--fonte-condensada);
+  font-size: 17px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
 
+/* Botão cheio azul: "FAZER CADASTRO" */
+.btn-primario {
+  background-color: var(--cor-azul);
+  color: #0b0b0b;
+}
+
+/* Botão só com contorno: "JÁ SOU ALUNO · LOGIN" */
+.btn-contorno {
+  background-color: transparent;
+  color: var(--cor-texto);
+  border-color: #2e2e2e;
+}
+
+.btn-primario:hover {
+  background-color: #a8e0ee;
+}
+
+.btn-contorno:hover {
+  border-color: var(--cor-azul);
+}
+
+/* Variante com fonte Archivo pesada (usada em Contato e Home) */
+.btn-pesado {
+  font-family: var(--fonte-titulo);
+  font-weight: 900;
+  letter-spacing: 0.25em;
+}
+
+
+/* ---------- 0.6 Campos de formulário ---------- */
+.campo {
+  width: 100%;
+  height: 64px;
+  padding: 0 22px;
+  background-color: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-campo);
+  color: var(--cor-texto);
+  font-family: var(--fonte-texto);
+  font-size: 18px;
+}
+
+.campo::placeholder {
+  color: var(--cor-texto-apagado);
+}
+
+/* Label escondida visualmente, mas lida pelos leitores de tela (acessibilidade) */
+.label-oculta {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+
+/* ---------- 0.7 Cards e placeholders de mídia ---------- */
+.card {
+  background-color: var(--cor-fundo);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-card);
+}
+
+/* Caixa cinza com texto no meio: lugar da foto/vídeo até termos as mídias reais */
+.placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cor-placeholder);
+  border: 1px solid #222222;
+  border-radius: var(--raio-card);
+  font-family: var(--fonte-condensada);
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #6f6f6f;
+}
+
+
+/* ---------- 0.8 Footer (nav) — no final da página, depois da última seção ---------- */
+/* Linha de cima: logo | links | redes sociais. Linha de baixo: copyright.
+   flex-wrap deixa o copyright (100% de largura) cair para a linha de baixo. */
+.rodape {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  padding: 56px var(--margem) 40px;
+  border-top: 1px solid #1d1d1d;
+}
+
+.rodape-logo img {
+  height: 32px;
+  width: auto;
+}
+
+.rodape-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+}
+
+.rodape-links a {
+  font-family: var(--fonte-condensada);
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cor-texto-suave);
+}
+
+.rodape-links a:hover {
+  color: var(--cor-azul);
+}
+
+/* Redes sociais: ícones redondos com borda fina */
+.rodape-social {
+  display: flex;
+  gap: 12px;
+}
+
+.rodape-social a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 50%;   /* círculo */
+  font-size: 18px;
+  color: var(--cor-texto-suave);
+}
+
+/* Passar o mouse: círculo preenchido com a cor de destaque da marca */
+.rodape-social a:hover {
+  background-color: var(--cor-azul);
+  border-color: var(--cor-azul);
+  color: var(--cor-fundo);
+}
+
+.rodape-copy {
+  width: 100%;   /* ocupa a linha inteira de baixo */
+  padding-top: 28px;
+  border-top: 1px solid #1d1d1d;
+  font-size: 13px;
+  color: var(--cor-texto-apagado);
+}
+
+
+/* ---------- 0.9 Responsivo global (tablets e celulares) ---------- */
+/* Tablets: as duas colunas ficam uma embaixo da outra */
+@media (max-width: 1100px) {
+  .duas-colunas {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  /* Títulos um pouco menores para palavras longas (LOCALIZAÇÃO) caberem */
+  .titulo-pagina {
+    font-size: 72px;
+  }
+}
+
+/* Celulares */
+@media (max-width: 767px) {
+  .cabecalho-links {
+    gap: 18px;
+  }
+
+  .cabecalho-links a {
+    font-size: 12px;
+  }
+
+  .pagina {
+    min-height: auto;
+    padding: 72px var(--margem);
+  }
+
+  .titulo-pagina {
+    font-size: 44px;
+  }
+
+  .texto-lead {
+    font-size: 17px;
+  }
+
+  .rodape {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+/* ---------- 0.10 Tema Playmakerz ----------
+   A página pkz/index.html usa <body class="pkz">.
+   Aqui só trocamos os VALORES das variáveis: todas as classes acima
+   (botões, campos, cards, header, footer, placeholders) passam a sair
+   em azul-marinho + dourado, com a fonte Barlow.
+   Obs.: na PKZ a variável --cor-azul guarda o DOURADO (cor de destaque). */
+.pkz {
+  --cor-fundo: #01012e;          /* azul-marinho do fundo */
+  --cor-superficie: #08083f;     /* inputs e cards */
+  --cor-placeholder: #0a0a44;    /* caixas de foto/vídeo */
+  --cor-borda: #22225c;
+  --cor-texto-suave: #e8e8f2;
+  --cor-texto-apagado: #8a8ab8;
+  --cor-azul: #c9a24a;           /* dourado PKZ (destaque) */
+  --cor-azul-escuro: #0d0d55;    /* fundo dos horários livres */
+  --cor-azul-borda: #34348a;     /* borda dos horários livres */
+  --fonte-titulo: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --fonte-condensada: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --fonte-texto: "Barlow", Arial, sans-serif;
+}
+
+/* Linhas do header/footer em azul */
+.pkz .cabecalho,
+.pkz .rodape {
+  border-color: #1b1b4d;
+}
+
+/* Links do menu: condensada fina (no One to One é Archivo pesada) */
+.pkz .cabecalho-links a {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* Títulos da PKZ são mais leves que os da One to One */
+.pkz .titulo-pagina {
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.pkz .eyebrow {
+  font-size: 13px;
+  letter-spacing: 0.35em;
+}
+
+.pkz .btn {
+  font-weight: 500;
+}
+
+.pkz .btn-primario {
+  color: #01012e;
+}
+
+.pkz .btn-primario:hover {
+  background-color: #dbb862;
+}
+
+.pkz .btn-contorno {
+  border-color: #2c2c6e;
+}
+
+.pkz .btn-pesado {
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.pkz .placeholder {
+  border-color: #22225c;
+  color: #6c6ca0;
+}
+ /* ===1. HOME — Arthur === */
+
+/* Coluna do texto um pouco mais larga que a da foto (3 partes x 2 partes) */
+.home-hero {
+  grid-template-columns: 3fr 2fr;
+  align-items: center;
+}
+
+.home-hero .eyebrow {
+  font-size: 15px;
+  letter-spacing: 0.35em;
+}
+
+/* clamp(mínimo, ideal, máximo): o título acompanha a largura da tela
+   (5.2vw = 5,2% da largura) sem passar de 96px nem ficar menor que 56px */
+.home-titulo {
+  font-size: clamp(56px, 5.2vw, 96px);
+  margin-bottom: 28px;
+}
+
+.home-hero .texto-lead {
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+.home-botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* "AULA EXPERIMENTAL": botão menor com Archivo */
+.home-botoes .btn-pesado {
+  height: 64px;
+  padding: 0 28px;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+}
+
+/* "AGENDAR AVALIAÇÃO": contorno com DM Sans espaçada */
+.home-botoes .btn-contorno {
+  height: 64px;
+  padding: 0 48px;
+  font-family: var(--fonte-texto);
+  font-size: 17px;
+  letter-spacing: 0.15em;
+}
+
+.home-foto {
+  height: 520px;
+}
+
+/* Tablets: texto em cima, foto embaixo */
+@media (max-width: 1100px) {
+  .home-hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-titulo {
+    font-size: 44px;
+  }
+
+  .home-foto {
+    height: 280px;
+  }
+}
+
+/* ----- 1.2 Home Playmakerz ----- */
+.pkz .home-titulo {
+  font-size: 100px;
+  line-height: 1.04;
+}
+
+.pkz .home-hero .eyebrow {
+  font-size: 13px;
+}
+
+/* "AULA GRÁTIS →" dourado */
+.pkz .home-botoes .btn-pesado {
+  height: 60px;
+  padding: 0 40px;
+  font-size: 18px;
+}
+
+/* "AGENDAR AVALIAÇÃO"  */
+.pkz .home-botoes .btn-contorno {
+  height: 60px;
+  padding: 0 40px;
+  font-family: var(--fonte-condensada);
+}
+
+@media (max-width: 767px) {
+  .pkz .home-titulo {
+    font-size: 48px;
+  }
+}
 /* =====================================================================
    2. SOBRE + TREINOS — Igor
    Seções #sobre e #treinos de one-to-one/index.html e pkz/index.html
@@ -261,7 +635,7 @@ ol {
   color: var(--cor-texto-suave);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .sobre-titulo {
     font-size: 44px;
   }
@@ -425,7 +799,7 @@ ol {
   border-radius: var(--raio-card);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .btn-largo {
     font-size: 15px;
     letter-spacing: 0.1em;
@@ -513,7 +887,7 @@ ol {
 }
 
 /* Celulares: cards de plano mais compactos */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .plano-card {
     min-height: auto;
     padding: 32px 24px;
@@ -743,7 +1117,7 @@ ol {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   /* Cards de contato menores no celular para caber na tela */
   .contato-card,
   .pkz .contato-card {
@@ -1028,7 +1402,7 @@ ol {
   color: var(--cor-texto-suave);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .dias {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1159,7 +1533,7 @@ ol {
   letter-spacing: 0.3em;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .pkz .agenda-subtitulo {
     flex-wrap: wrap;
     gap: 10px;
@@ -1185,7 +1559,7 @@ ol {
 
 /* ----- Layout responsivo ----- */
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .galeria-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1666,7 +2040,7 @@ ol {
 }
 
 /* ----- 7.7 Hub no celular ----- */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .hub-cabecalho {
         justify-content: space-between;
     }
