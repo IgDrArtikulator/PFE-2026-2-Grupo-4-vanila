@@ -1,100 +1,171 @@
- /* ===1. HOME — Arthur === */
+/* =====================================================================
+   0. CONFIGURAÇÕES GLOBAIS — Arthur
+   Variáveis, reset, tipografia, botões, campos de formulário,
+   cards, placeholders, header (nav) e footer (nav).
+   ===================================================================== */
 
-/* Coluna do texto um pouco mais larga que a da foto (3 partes x 2 partes) */
-.home-hero {
-  grid-template-columns: 3fr 2fr;
-  align-items: center;
+/* ---------- 0.1 Variáveis (cores, fontes e medidas do design) ---------- */
+:root {
+  /* Cores One to One */
+  --cor-fundo: #0b0b0b;          /* fundo de todas as páginas */
+  --cor-superficie: #111111;     /* fundo de inputs e cards */
+  --cor-placeholder: #161616;    /* caixas de foto/vídeo ainda vazias */
+  --cor-borda: #242424;          /* bordas finas de cards e inputs */
+  --cor-texto: #ffffff;          /* títulos */
+  --cor-texto-suave: #cfcfcf;    /* parágrafos */
+  --cor-texto-apagado: #8a8a8a;  /* placeholders e legendas */
+  --cor-azul: #8ed3e6;           /* azul One to One (destaques e botões) */
+  --cor-azul-escuro: #0e1b22;    /* fundo dos horários livres */
+  --cor-azul-borda: #1f4555;     /* borda dos horários livres */
+
+  /* Fontes (carregadas pelo Google Fonts no <head> de cada página) */
+  --fonte-titulo: "Archivo", Arial, sans-serif;               /* títulos pesados */
+  --fonte-condensada: "Oswald", "Arial Narrow", sans-serif;   /* eyebrows e botões */
+  --fonte-texto: "DM Sans", Arial, sans-serif;                /* parágrafos */
+
+  /* Medidas */
+  --espaco-lateral: 24px;       /* margem mínima esquerda/direita (celular) */
+  --largura-conteudo: 1680px;   /* largura máxima do conteúdo (só em telas enormes) */
+
+  /* Margem lateral de header, seções e footer: 6% da largura da tela (6vw),
+     então cresce junto com a tela e fica proporcional em qualquer monitor.
+     max() escolhe o maior dos valores: nunca menos que 24px e, em telas
+     enormes, o conteúdo para de crescer em 1680px. */
+  --margem: max(var(--espaco-lateral), 6vw, calc((100% - var(--largura-conteudo)) / 2));
+
+  --raio-card: 16px;   /* cantos arredondados dos cards */
+  --raio-campo: 10px;  /* cantos dos inputs */
 }
 
-.home-hero .eyebrow {
-  font-size: 15px;
-  letter-spacing: 0.35em;
+
+/* ---------- 0.2 Reset ---------- */
+/* border-box: largura total já inclui padding e borda (boa prática do slide de box-sizing) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* clamp(mínimo, ideal, máximo): o título acompanha a largura da tela
-   (5.2vw = 5,2% da largura) sem passar de 96px nem ficar menor que 56px */
-.home-titulo {
-  font-size: clamp(56px, 5.2vw, 96px);
-  margin-bottom: 28px;
-}
-
-.home-hero .texto-lead {
-  max-width: 600px;
-  margin-bottom: 40px;
-}
-
-.home-botoes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-/* "AULA EXPERIMENTAL": botão menor com Archivo */
-.home-botoes .btn-pesado {
-  height: 64px;
-  padding: 0 28px;
-  font-size: 15px;
-  letter-spacing: 0.1em;
-}
-
-/* "AGENDAR AVALIAÇÃO": contorno com DM Sans espaçada */
-.home-botoes .btn-contorno {
-  height: 64px;
-  padding: 0 48px;
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
   font-family: var(--fonte-texto);
-  font-size: 17px;
-  letter-spacing: 0.15em;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
-.home-foto {
-  height: 520px;
+/* Imagens nunca distorcem (slide "Boas práticas com imagens") */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-/* Tablets: texto em cima, foto embaixo */
-@media (max-width: 1100px) {
-  .home-hero {
-    grid-template-columns: 1fr;
-  }
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-@media (max-width: 768px) {
-  .home-titulo {
-    font-size: 44px;
-  }
-
-  .home-foto {
-    height: 280px;
-  }
+ul,
+ol {
+  list-style: none;
 }
 
-/* ----- 1.2 Home Playmakerz ----- */
-.pkz .home-titulo {
-  font-size: 100px;
-  line-height: 1.04;
+
+/* ---------- 0.3 Header (nav) — fixo no topo da One to One e da PKZ ---------- */
+/* position: sticky = o header rola junto até encostar no topo (top: 0)
+   e fica preso ali enquanto o resto da página rola por baixo dele. */
+.cabecalho {
+  position: sticky;
+  top: 0;
+  z-index: 10;                          /* fica por cima das seções que passam por baixo */
+  display: flex;
+  justify-content: space-between;       /* logo na esquerda, links na direita */
+  align-items: center;
+  height: 72px;
+  padding: 0 var(--margem);
+  background-color: var(--cor-fundo);   /* fundo sólido para o conteúdo não aparecer atrás */
+  border-bottom: 1px solid #1d1d1d;
 }
 
-.pkz .home-hero .eyebrow {
-  font-size: 13px;
+.logo img {
+  height: 46px;
+  width: auto;
 }
 
-/* "AULA GRÁTIS →" dourado */
-.pkz .home-botoes .btn-pesado {
-  height: 60px;
-  padding: 0 40px;
-  font-size: 18px;
+.cabecalho-links {
+  display: flex;
+  gap: 44px;
 }
 
-/* "AGENDAR AVALIAÇÃO"  */
-.pkz .home-botoes .btn-contorno {
-  height: 60px;
-  padding: 0 40px;
+.cabecalho-links a {
+  font-family: var(--fonte-titulo);
+  font-weight: 800;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.cabecalho-links a:hover {
+  color: var(--cor-azul);
+}
+
+
+/* ---------- 0.4 Seções da página e tipografia comum ---------- */
+/* Cada <section class="pagina"> é uma parte da página que rola (Home, Sobre, Treinos...). */
+.pagina {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* conteúdo no meio da altura da seção */
+  min-height: 100vh;         /* cada seção ocupa pelo menos uma tela inteira */
+  padding: 120px var(--margem);
+  scroll-margin-top: 72px;   /* ao clicar num link #secao, o título não fica atrás do header fixo */
+}
+
+/* Linha fina entre uma seção e a próxima (combinador "+": seção logo depois de outra seção) */
+.pagina + .pagina {
+  border-top: 1px solid var(--cor-borda);
+}
+
+/* Texto pequeno azul acima do título: "ONE TO ONE · CADASTRO" */
+.eyebrow {
   font-family: var(--fonte-condensada);
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--cor-azul);
+  margin-bottom: 32px;
 }
 
-@media (max-width: 768px) {
-  .pkz .home-titulo {
-    font-size: 48px;
-  }
+/* Título gigante das páginas: "CADASTRO DE ALUNOS" */
+.titulo-pagina {
+  font-family: var(--fonte-titulo);
+  font-weight: 900;
+  font-size: 96px;
+  line-height: 1;
+  text-transform: uppercase;
+  overflow-wrap: break-word;   /* em telas bem estreitas, palavra longa quebra em vez de sair da tela */
+  margin-bottom: 56px;
+}
+
+/* Parágrafo de apoio logo abaixo do título */
+.texto-lead {
+  font-size: 22px;
+  line-height: 1.9;
+  color: var(--cor-texto-suave);
+}
+
+/* Layout de duas colunas iguais (texto | formulário/foto) */
+.duas-colunas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+/* min-width: 0 deixa cada coluna encolher em telas pequenas
+   (sem isso o conteúdo empurra a página para o lado) */
+.duas-colunas > * {
+  min-width: 0;
 }
 
 
@@ -920,72 +991,6 @@
 .pkz .galeria-item {
     background-color: var(--cor-placeholder);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* =====================================================================
    3. PLANOS + UNIDADES — Mateus
