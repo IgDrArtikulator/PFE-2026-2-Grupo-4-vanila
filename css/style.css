@@ -951,3 +951,502 @@
     font-size: 24px;
   }
 }
+/* =====================================================================
+   HUB — Caio
+   Arquivo: hub/index.html
+   Visual próprio do Hub: creme + lilás, fonte Barlow Condensed.
+   ===================================================================== */
+
+/* ----- 7.1 Variáveis só do Hub ----- */
+.hub {
+    --hub-fundo: #0e0d0d;
+    --hub-creme: #efe9e1;
+    --hub-texto: #cfc9c1;
+    --hub-lilas: #8b90f8;
+    --hub-linha: #2a2a45;
+    --hub-azul-pkz: #1f1f8f;
+    --hub-ciano: #bdeff6;
+    --hub-titulo: "Barlow Condensed", "Arial Narrow", sans-serif;
+    --hub-corpo: "Barlow", Arial, sans-serif;
+    /* Margem lateral do Hub: a mesma regra das outras páginas (6% da tela) */
+    --hub-margem: max(24px, 6vw, calc((100% - 1680px) / 2));
+
+    margin: 0; /* tira a margem branca padrão do navegador */
+    background-color: var(--hub-fundo);
+    color: var(--hub-creme);
+    font-family: var(--hub-corpo);
+}
+
+/* Listas do nav e do footer: sem bolinhas e sem recuo */
+.hub nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Link base do Hub: sem sublinhado e com a cor do texto em volta.
+   Fica antes das outras regras para que botões e links coloridos sobrescrevam a cor. */
+.hub-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Conteúdo do Hub com a mesma margem lateral do header e do footer */
+.hub-container {
+    padding-left: var(--hub-margem);
+    padding-right: var(--hub-margem);
+}
+
+/* Linha fina lilás entre as seções */
+.hub-divisor {
+    height: 1px;
+    margin: 0 var(--hub-margem); /* linha alinhada com o conteúdo */
+    background-color: var(--hub-linha);
+    border: 0;
+}
+
+/* ----- 7.2 Header (nav) do Hub ----- */
+.hub-cabecalho {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 72px;
+    padding: 0 var(--hub-margem);
+}
+
+.hub-links {
+    display: flex;
+    gap: 34px;
+}
+
+.hub-links a {
+    padding-bottom: 6px;
+    font-family: var(--hub-corpo);
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+/* Link da página atual: lilás com traço embaixo */
+.hub-links .ativo {
+    color: var(--hub-lilas);
+    border-bottom: 1px solid var(--hub-lilas);
+}
+
+/* Botão "AGENDE UM TREINO" preso na direita */
+.hub-cta {
+    position: absolute;
+    right: var(--hub-margem); /* alinhado com a borda direita do conteúdo */
+    padding: 10px 20px;
+    background-color: var(--hub-lilas);
+    border-radius: 999px;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #10103a;
+}
+
+/* ----- 7.3 Hero ----- */
+/* Hero ocupa a tela (menos o header) com o texto centralizado na altura */
+.hub-hero {
+    position: relative; /* âncora da foto de fundo e do slider */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100vh - 72px);
+    padding-top: 64px;
+    padding-bottom: 120px; /* espaço entre o botão e a linha de baixo */
+}
+
+/* Foto de fundo ocupando o hero inteiro (placeholder por enquanto) */
+.hub-hero-foto {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    color: #5c5c5c;
+    background-color: #141313; /* área da foto visível enquanto não tem imagem */
+}
+
+.hub-hero-conteudo {
+    position: relative; /* fica por cima da foto */
+    max-width: 520px;
+}
+
+.hub-eyebrow {
+    font-size: 13px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--hub-lilas);
+    margin-bottom: 18px;
+}
+
+.hub-titulo {
+    font-family: var(--hub-titulo);
+    font-weight: 500;
+    font-size: 88px;
+    line-height: 0.88;
+    text-transform: uppercase;
+    overflow-wrap: break-word; /* palavra longa quebra em vez de sair da tela */
+    margin-bottom: 20px;
+}
+
+/* Palavras "ALTA PERFORMANCE" em lilás */
+.hub-titulo span {
+    color: var(--hub-lilas);
+}
+
+.hub-hero-conteudo p {
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--hub-texto);
+    margin-bottom: 26px;
+}
+
+/* Botão pílula genérico do Hub */
+.hub-btn {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 999px;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.hub-btn-lilas {
+    background-color: var(--hub-lilas);
+    color: #10103a;
+}
+
+/* Controles do slider (só visual por enquanto, JS depois) */
+.hub-slider {
+    position: absolute;
+    right: var(--hub-margem); /* alinhado com a borda direita do conteúdo */
+    bottom: 60px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+}
+
+.hub-slider-traco {
+    width: 14px;
+    height: 2px;
+    background-color: #555555;
+}
+
+.hub-slider-traco.ativo {
+    background-color: var(--hub-lilas);
+}
+
+.hub-slider-seta {
+    margin: 0 18px;
+}
+
+/* ----- 7.4 Escolha sua jornada ----- */
+.hub-secao {
+    padding-top: 112px;
+    padding-bottom: 112px;
+}
+
+.hub-subtitulo {
+    font-family: var(--hub-titulo);
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 1.05;
+    text-transform: uppercase;
+}
+
+/* Traço lilás */
+.hub-traco {
+    width: 40px;
+    height: 2px;
+    margin: 18px 0 32px;
+    background-color: var(--hub-lilas);
+    border: 0;
+}
+
+.hub-marcas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Caixa da foto com borda tracejada (lugar da imagem) */
+.hub-foto {
+    position: relative; /* âncora do selo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 328px;
+    border: 1px dashed #4a4a4a;
+    background-color: #161515;
+    font-size: 13px;
+    color: #8a8a8a;
+}
+
+/* Selo "ATÉ 17 ANOS" / "ADULTOS" no canto da foto */
+.hub-selo {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    padding: 4px 14px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.selo-pkz {
+    background-color: #14145a;
+    border: 1px solid var(--hub-lilas);
+    color: var(--hub-creme);
+}
+
+.selo-one {
+    background-color: var(--hub-ciano);
+    color: #0e2a30;
+}
+
+.hub-marca-logo {
+    height: 32px;
+    width: auto;
+    margin: 26px 0 14px;
+}
+
+.hub-marca p {
+    font-size: 15px;
+    color: var(--hub-texto);
+    margin-bottom: 20px;
+}
+
+.hub-btn-pkz {
+    background-color: var(--hub-azul-pkz);
+    border: 1px solid var(--hub-lilas);
+    color: var(--hub-creme);
+}
+
+.hub-btn-one {
+    background-color: var(--hub-ciano);
+    color: #0e2a30;
+}
+
+/* ----- 7.5 Vídeos ----- */
+.hub-video-principal {
+    position: relative;
+    margin-top: 24px; /* espaço entre o título "VEJA A GENTE EM AÇÃO" e o vídeo */
+}
+
+/* Botão play redondo no centro */
+.hub-play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 72px;
+    height: 72px;
+    border: 1px solid var(--hub-creme);
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+/* Legenda "UM DIA DE TREINO" no canto inferior esquerdo */
+.hub-video-legenda {
+    color: var(--hub-creme);
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+    font-family: var(--hub-titulo);
+    font-size: 22px;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+/* 3 vídeos menores numa grade de 4 colunas (4ª fica vazia, como no design) */
+.hub-videos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.hub-video {
+    position: relative;
+    height: 330px;
+}
+
+/* Play pequeno no canto superior direito */
+.hub-video .hub-play {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 36px;
+    height: 36px;
+    font-size: 12px;
+    background-color: #0e0d0d;
+    border-color: #0e0d0d;
+}
+
+.hub-video figcaption {
+    color: var(--hub-creme);
+    position: absolute;
+    left: 14px;
+    bottom: 16px;
+}
+
+.hub-video-tag {
+    display: block; /* tag em cima, título embaixo (sem <br>) */
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--hub-lilas);
+}
+
+.hub-video-titulo {
+    font-family: var(--hub-titulo);
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+/* ----- 7.6 Footer (nav) do Hub ----- */
+/* Grade: logos | links (no meio) | redes sociais; copyright na linha de baixo */
+.hub-rodape {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    row-gap: 32px;
+    padding: 48px var(--hub-margem) 36px;
+    border-top: 1px solid #222222;
+}
+
+.hub-rodape-logos {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.hub-rodape-logos img {
+    height: 26px;
+    width: auto;
+}
+
+.hub-rodape-separador {
+    width: 1px;
+    height: 26px;
+    background-color: #444444;
+}
+
+.hub-rodape-links {
+    display: flex;
+    gap: 48px;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.hub-rodape-links li:first-child a {
+    color: var(--hub-lilas);
+}
+
+.hub-rodape-links li:last-child a {
+    color: var(--hub-ciano);
+}
+
+/* Ícones do Hub: mesmas classes do footer das marcas, com as cores do Hub */
+.hub-redes {
+    justify-self: end; /* encosta na direita da grade */
+}
+
+/* .rodape-social não existe neste CSS, então o Hub define o visual completo dos ícones aqui */
+.hub-social {
+    display: flex;
+    gap: 12px;
+}
+
+.hub-social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #333333;
+    border-radius: 50%;
+    font-size: 18px;
+    color: var(--hub-creme);
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+/* Cor de cada marca: lilás = Playmakerz, ciano = One to One */
+.hub-social .social-pkz {
+    color: var(--hub-lilas);
+}
+
+.hub-social .social-one {
+    color: var(--hub-ciano);
+}
+
+.hub-social .social-pkz:hover {
+    background-color: var(--hub-lilas);
+    border-color: var(--hub-lilas);
+    color: #10103a;
+}
+
+.hub-social .social-one:hover {
+    background-color: var(--hub-ciano);
+    border-color: var(--hub-ciano);
+    color: #0e2a30;
+}
+
+.hub-rodape-copy {
+    grid-column: 1 / -1; /* ocupa todas as colunas, na linha de baixo */
+    padding-top: 24px;
+    border-top: 1px solid #222222;
+    font-size: 12px;
+    color: #8a8a8a;
+}
+
+/* ----- 7.7 Hub no celular ----- */
+@media (max-width: 768px) {
+    .hub-cabecalho {
+        justify-content: space-between;
+    }
+
+    .hub-cta {
+        position: static;
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+
+    .hub-links {
+        gap: 14px;
+    }
+
+    .hub-titulo {
+        font-size: 48px;
+    }
+
+    .hub-subtitulo {
+        font-size: 34px;
+    }
+
+    .hub-marcas,
+    .hub-videos,
+    .hub-rodape {
+        grid-template-columns: 1fr;
+    }
+
+    .hub-rodape {
+        gap: 24px;
+    }
+
+    .hub-redes {
+        justify-self: start;
+    }
+}
