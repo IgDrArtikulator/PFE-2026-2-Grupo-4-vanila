@@ -25,9 +25,15 @@
 
         <nav aria-label="Navegação principal">
             <ul class="cabecalho-links">
-                <li><a href="../pkz/index.html">Playmakerz</a></li>
-                <li><a href="#inicio">One to One</a></li>
-                <li><a href="../hub/index.html">Hub</a></li>
+                <li>
+                    <a href="../pkz/index.html">Playmakerz</a>
+                </li>
+                <li>
+                    <a href="#inicio">One to One</a>
+                </li>
+                <li>
+                    <a href="../hub/index.html">Hub</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -83,16 +89,108 @@
     </figure>
   </div>
 </section>
-<!-- ===== TREINOS ===== -->
+<!-- ===== INFORMAÇÕES SOBRE TREINOS — Igor ===== -->
 <section class="pagina" id="treinos">
-  <p class="eyebrow">One to One · Treinos</p>
+  <header>
+    <p class="eyebrow">One to One · Treinos</p>
+    <h2 class="titulo-pagina">Informações sobre treinos</h2>
+    <p class="texto-lead treinos-intro">
+      Sessões individuais, com programa montado a partir da sua avaliação
+      e necessidades.
+    </p>
+  </header>
 
-  <h2 class="titulo-pagina">Informações sobre treinos</h2>
+  <!-- 3 cards em grid (3 colunas no desktop, 1 no celular) -->
+  <div class="treinos-grid">
+    <article class="card treino-card">
+      <p class="eyebrow">Avaliação</p>
+      <h2>Ponto de partida</h2>
+      <p>
+        Primeira sessão para entender histórico, rotina e objetivo de
+        condicionamento.
+      </p>
+    </article>
 
-  <h3>
+    <article class="card treino-card">
+      <p class="eyebrow">Programa</p>
+      <h2>Melhora do seu condicionamento físico</h2>
+      <p>
+        Força, mobilidade e capacidade aeróbica de acordo com seu objetivo.
+      </p>
+    </article>
+
+    <article class="card treino-card">
+      <p class="eyebrow">Acompanhamento</p>
+      <h2>Um profissional dedicado ao aluno</h2>
+      <p>
+        Horários flexíveis, evolução registrada e ajuste do programa
+        sessão a sessão.
+      </p>
+    </article>
+  </div>
+</section>
+<!-- ===== PLANOS / AULA GRATUITA EXPERIMENTAL — Mateus =====
+     Página toda centralizada (flex em coluna) -->
+<section class="pagina planos" id="planos">
+  <header>
+    <p class="eyebrow">One to One · Planos</p>
+    <h2 class="titulo-pagina">Aula gratuita experimental</h2>
+    <p class="planos-texto">
+      Venha fazer uma aula experimental gratuita e depois escolha seu pacote
+      (opções variadas e com diferentes valores de acordo com sua necessidade).
+    </p>
+  </header>
+  <a class="btn btn-primario btn-largo" href="#agendamento">Agendar aula experimental</a>
+  <!-- Passo a passo: lista ordenada (ol) porque a ordem importa -->
+  <ol class="passos">
+    <li class="passo">
+      <span class="passo-numero">1</span>
+      <div>
+        <h2>Agende pelo WhatsApp</h2>
+        <p>Escolha o horário que se encaixa na sua rotina.</p>
+      </div>
+    </li>
+    <li class="passo">
+      <span class="passo-numero">2</span>
+      <div>
+        <h2>Faça sua aula experimental</h2>
+        <p>Uma sessão individual com um profissional dedicado a você.</p>
+      </div>
+    </li>
+    <li class="passo">
+      <span class="passo-numero">3</span>
+      <div>
+        <h2>Escolha seu pacote</h2>
+        <p>Opções variadas, com valores de acordo com sua necessidade.</p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- ===== UNIDADES E LOCALIZAÇÃO — Mateus ===== -->
+<section class="pagina" id="unidades">
+  <header>
+    <p class="eyebrow">One to One · Unidades</p>
+    <h2 class="titulo-pagina">Unidades e localização</h2>
+  </header>
+  <div class="duas-colunas">
+    <article>
+      <h2 class="unidade-nome">Unidade 1 - Armando Lombardi</h2>
+      <!-- address = dados de contato/endereço (elemento semântico) -->
+      <address class="unidade-endereco">Av Armando Lombardi, 949 - Loja G · Horários que se encaixam na sua rotina!</address>
+    </article>
+    <!-- Mapa do Google embutido com iframe -->
+    <iframe class="mapa"
+      src="https://www.google.com/maps?q=Av+Armando+Lombardi+949+Barra+da+Tijuca+Rio+de+Janeiro&output=embed"
+      title="Mapa da Unidade 1 - Armando Lombardi"
+      loading="lazy"></iframe>
+  </div>
+</section>
+
+  <p>
     Sessões individuais, com programa montado a partir da sua avaliação
     e necessidades.
-  </h3>
+  </p>
 
   <div class="treinos-cards">
     <article class="treino-card">
@@ -124,3 +222,267 @@
   </div>
 </section>
 
+<!-- GALERIA DE FOTOS E VÍDEOS — Rodrigo -->
+<section class="pagina" id="galeria">
+    <header>
+        <p class="eyebrow">One to One · Galeria</p>
+        <h2 class="titulo-pagina">Galeria de fotos e vídeos</h2>
+    </header>
+
+    <div class="galeria-grid">
+        <figure class="placeholder galeria-item">
+            Foto 1
+        </figure>
+
+        <figure class="placeholder galeria-item">
+            Foto 2
+        </figure>
+
+        <figure class="placeholder galeria-item">
+            Vídeo (capa)
+        </figure>
+
+        <figure class="placeholder galeria-item">
+            Foto 4
+        </figure>
+    </div>
+</section>
+
+<!-- ===== CONTATE-NOS — Guilherme ===== -->
+<section class="pagina" id="contato">
+  <header>
+    <p class="eyebrow">One to One · Contato</p>
+    <h2 class="titulo-pagina contato-titulo">Contate-nos</h2>
+    <p class="texto-lead">
+      Fale direto com a equipe pelo canal que preferir.<br>
+      Responderemos o quanto antes, em horário comercial.
+    </p>
+  </header>
+
+  <div class="duas-colunas">
+    <!-- Coluna esquerda: canais -->
+    <ul class="contato-lista">
+      <li>
+        <a class="card contato-card" href="https://wa.me/5521971067347" target="_blank" rel="noopener noreferrer">
+          <span class="contato-icone icone-whatsapp"><i class="fa-brands fa-whatsapp"></i></span>
+          <span class="contato-info">
+            <span class="contato-rotulo">WhatsApp</span>
+            <span class="contato-valor">(21) 97106-7347</span>
+          </span>
+          <span class="contato-seta">&rarr;</span>
+        </a>
+      </li>
+      <li>
+        <a class="card contato-card" href="https://www.instagram.com/onetoonestudio/" target="_blank" rel="noopener noreferrer">
+          <span class="contato-icone icone-instagram"><i class="fa-brands fa-instagram"></i></span>
+          <span class="contato-info">
+            <span class="contato-rotulo">Instagram</span>
+            <span class="contato-valor">@onetoonestudio</span>
+          </span>
+          <span class="contato-seta">&rarr;</span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- Coluna direita: atendimento + unidade -->
+    <article class="card atendimento-card">
+      <p class="eyebrow">Atendimento</p>
+      <p>Segunda a sábado, por horário marcado. Respondemos em horário comercial.</p>
+      <h2 class="atendimento-unidade">Unidade 1 - Armando Lombardi</h2>
+      <address>Av Armando Lombardi, 949 - Loja G - Horários a Combinar</address>
+      <div class="atendimento-botoes">
+        <a class="btn btn-primario btn-pesado" href="#cadastro">Fazer cadastro</a>
+        <a class="btn btn-contorno btn-pesado" href="#unidades">Ver unidades</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== AGENDAMENTO — Lucas =====
+     Só HTML + CSS por enquanto. Dias e horários são inputs radio dentro de labels
+     (pareamento por encapsulamento). O selecionado fica azul pelo CSS (:checked + span).
+     Ocupados usam o atributo disabled. Atualizar o painel da direita e os horários
+     de cada dia vai ser feito com JavaScript depois. -->
+<section class="pagina" id="agendamento">
+  <header>
+    <p class="eyebrow">One to One · Agendamento</p>
+    <h2 class="titulo-pagina">Escolha dia e horário</h2>
+    <p class="texto-lead agenda-texto">Aula experimental gratuita. Horários em cinza já estão ocupados — selecione um horário livre para concluir o agendamento.</p>
+  </header>
+
+  <div class="duas-colunas agenda-grid">
+    <!-- Coluna esquerda: dias + horários -->
+    <div>
+      <fieldset class="agenda-grupo">
+        <legend class="label-oculta">Escolha o dia</legend>
+        <div class="dias">
+          <label class="dia">
+            <input type="radio" name="dia" value="2026-09-22" checked>
+            <span><abbr class="dia-semana" title="Segunda-feira">Seg</abbr><strong>22</strong><abbr title="setembro">Set</abbr></span>
+          </label>
+          <label class="dia">
+            <input type="radio" name="dia" value="2026-09-23">
+            <span><abbr class="dia-semana" title="Terça-feira">Ter</abbr><strong>23</strong><abbr title="setembro">Set</abbr></span>
+          </label>
+          <label class="dia">
+            <input type="radio" name="dia" value="2026-09-24">
+            <span><abbr class="dia-semana" title="Quarta-feira">Qua</abbr><strong>24</strong><abbr title="setembro">Set</abbr></span>
+          </label>
+          <label class="dia">
+            <input type="radio" name="dia" value="2026-09-25">
+            <span><abbr class="dia-semana" title="Quinta-feira">Qui</abbr><strong>25</strong><abbr title="setembro">Set</abbr></span>
+          </label>
+          <label class="dia">
+            <input type="radio" name="dia" value="2026-09-26">
+            <span><abbr class="dia-semana" title="Sexta-feira">Sex</abbr><strong>26</strong><abbr title="setembro">Set</abbr></span>
+          </label>
+          <label class="dia">
+            <input type="radio" name="dia" value="2026-09-27">
+            <span><abbr class="dia-semana" title="Sábado">Sáb</abbr><strong>27</strong><abbr title="setembro">Set</abbr></span>
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset class="agenda-grupo">
+        <legend class="label-oculta">Escolha o horário</legend>
+        <header class="agenda-subtitulo">
+          <h2><time datetime="2026-09-22">Seg, 22 de setembro</time></h2>
+          <span>7 horários livres</span>
+        </header>
+        <div class="horarios">
+          <label class="horario horario-ocupado">
+            <input type="radio" name="horario" value="07:00" disabled>
+            <span>07:00</span>
+          </label>
+          <label class="horario horario-livre">
+            <input type="radio" name="horario" value="08:00" checked>
+            <span>08:00</span>
+          </label>
+          <label class="horario horario-ocupado">
+            <input type="radio" name="horario" value="09:00" disabled>
+            <span>09:00</span>
+          </label>
+          <label class="horario horario-ocupado">
+            <input type="radio" name="horario" value="10:00" disabled>
+            <span>10:00</span>
+          </label>
+          <label class="horario horario-livre">
+            <input type="radio" name="horario" value="11:00">
+            <span>11:00</span>
+          </label>
+          <label class="horario horario-livre">
+            <input type="radio" name="horario" value="12:00">
+            <span>12:00</span>
+          </label>
+          <label class="horario horario-livre">
+            <input type="radio" name="horario" value="15:00">
+            <span>15:00</span>
+          </label>
+          <label class="horario horario-ocupado">
+            <input type="radio" name="horario" value="16:00" disabled>
+            <span>16:00</span>
+          </label>
+          <label class="horario horario-livre">
+            <input type="radio" name="horario" value="17:00">
+            <span>17:00</span>
+          </label>
+          <label class="horario horario-ocupado">
+            <input type="radio" name="horario" value="18:00" disabled>
+            <span>18:00</span>
+          </label>
+          <label class="horario horario-livre">
+            <input type="radio" name="horario" value="19:00">
+            <span>19:00</span>
+          </label>
+          <label class="horario horario-livre">
+            <input type="radio" name="horario" value="20:00">
+            <span>20:00</span>
+          </label>
+        </div>
+      </fieldset>
+
+      <ul class="legenda">
+        <li><span class="legenda-cor legenda-livre"></span>Livre</li>
+        <li><span class="legenda-cor legenda-ocupado"></span>Ocupado</li>
+      </ul>
+    </div>
+
+    <!-- Coluna direita: painel de confirmação -->
+    <aside class="card confirmar">
+      <p class="confirmar-rotulo">Confirmar agendamento</p>
+      <p class="confirmar-titulo"><time datetime="2026-09-22T08:00">08:00 · Seg 22/09</time></p>
+      <!-- X volta para Planos -->
+      <a class="confirmar-fechar" href="#planos" aria-label="Fechar">&times;</a>
+
+      <form class="confirmar-form" action="#inicio" method="post">
+        <label class="label-oculta" for="ag-nome">Nome completo</label>
+        <input class="campo" type="text" id="ag-nome" name="nome" placeholder="Nome completo" required>
+
+        <label class="label-oculta" for="ag-email">E-mail</label>
+        <input class="campo" type="email" id="ag-email" name="email" placeholder="E-mail" required>
+
+        <label class="label-oculta" for="ag-telefone">Telefone</label>
+        <input class="campo" type="tel" id="ag-telefone" name="telefone" placeholder="Telefone" required>
+
+        <button class="btn btn-primario btn-enviar" type="submit">Enviar</button>
+      </form>
+      <p class="confirmar-aviso">Você receberá a confirmação do agendamento por e-mail.</p>
+    </aside>
+  </div>
+</section>
+
+  <!-- ===== FOOTER (nav) — só no final da página: logo | links das seções | redes sociais | copyright ===== -->
+  <footer class="rodape">
+    <a class="rodape-logo" href="#inicio">
+      <img src="img-oto/logo-one-to-one.png" alt="One to One Studio">
+    </a>
+
+    <nav aria-label="Navegação do rodapé">
+      <ul class="rodape-links">
+        <li>
+          <a href="#sobre">Sobre</a>
+        </li>
+        <li>
+          <a href="#treinos">Treinos</a>
+        </li>
+        <li>
+          <a href="#planos">Planos</a>
+        </li>
+        <li>
+          <a href="#unidades">Unidades</a>
+        </li>
+        <li>
+          <a href="#galeria">Galeria</a>
+        </li>
+        <li>
+          <a href="#contato">Contato</a>
+        </li>
+        <li>
+          <a href="hub/index.html">Hub PKZ</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Redes sociais: ícones do Font Awesome; aria-label diz o nome para leitores de tela -->
+    <nav aria-label="Redes sociais">
+      <ul class="rodape-social">
+        <li>
+          <a href="https://www.instagram.com/onetoonestudio/" target="_blank" rel="noopener noreferrer"
+             aria-label="Instagram do One to One" title="Instagram do One to One">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://wa.me/5521971067347" target="_blank" rel="noopener noreferrer"
+             aria-label="WhatsApp do One to One" title="WhatsApp do One to One">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <p class="rodape-copy">&copy; 2026 PKZ · One to One Studio</p>
+  </footer>
+
+</body>
+</html>
