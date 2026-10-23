@@ -472,25 +472,14 @@ ol {
 
 .home-botoes {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
 }
 
-/* "AULA EXPERIMENTAL": botão menor com Archivo */
+/* CTA único "AGENDAR AULA EXPERIMENTAL": botão cheio com Archivo */
 .home-botoes .btn-pesado {
   height: 64px;
-  padding: 0 28px;
+  padding: 0 44px;
   font-size: 15px;
   letter-spacing: 0.1em;
-}
-
-/* "AGENDAR AVALIAÇÃO": contorno com DM Sans espaçada */
-.home-botoes .btn-contorno {
-  height: 64px;
-  padding: 0 48px;
-  font-family: var(--fonte-texto);
-  font-size: 17px;
-  letter-spacing: 0.15em;
 }
 
 .home-foto {
@@ -524,18 +513,11 @@ ol {
   font-size: 13px;
 }
 
-/* "AULA GRÁTIS →" dourado */
+/* CTA único "AGENDAR AULA GRÁTIS →" dourado */
 .pkz .home-botoes .btn-pesado {
   height: 60px;
   padding: 0 40px;
   font-size: 18px;
-}
-
-/* "AGENDAR AVALIAÇÃO"  */
-.pkz .home-botoes .btn-contorno {
-  height: 60px;
-  padding: 0 40px;
-  font-family: var(--fonte-condensada);
 }
 
 @media (max-width: 767px) {
