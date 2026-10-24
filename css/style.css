@@ -1130,10 +1130,10 @@ ol {
 /* =====================================================================
    5. AGENDAMENTO — Lucas
    Seção #agendamento de one-to-one/index.html e pkz/index.html
-   Só HTML + CSS por enquanto: dias e horários são inputs radio.
+   Dias e horários são inputs radio criados pelo js/agendamento.js.
    O item marcado fica azul com o seletor :checked + combinador "+"
-   (input:checked + span). A troca do horário no painel da direita
-   vai ser feita com JavaScript quando o professor ensinar.
+   (input:checked + span). O JS também troca o horário no painel da
+   direita e mostra as mensagens (5.7).
    ===================================================================== */
 .agenda-texto {
   max-width: 720px;
@@ -1520,6 +1520,46 @@ ol {
     flex-wrap: wrap;
     gap: 10px;
   }
+}
+
+/* ----- 5.7 Estados controlados pelo JavaScript ----- */
+/* Navegação por teclado: o radio é invisível (opacity: 0),
+   então o contorno de foco aparece no <span> do lado */
+.dia input:focus-visible + span,
+.horario input:focus-visible + span {
+  outline: 2px solid var(--cor-azul);
+  outline-offset: 3px;
+}
+
+/* Título do painel antes de escolher um horário */
+.confirmar-vazio {
+  color: var(--cor-texto-apagado);
+}
+
+/* O atributo hidden esconde o formulário e o botão "Novo agendamento".
+   Sem esta regra, o display: flex dessas classes ganharia do hidden. */
+.confirmar [hidden] {
+  display: none;
+}
+
+/* Mensagem de erro ou de sucesso (só ganha espaço quando tem texto) */
+.confirmar-status:not(:empty) {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 18px;
+  color: var(--cor-texto);
+}
+
+.confirmar-status.erro {
+  font-size: 16px;
+  color: #ff8a80;   /* vermelho claro: lê bem no preto e no azul-marinho */
+}
+
+/* Botão "Novo agendamento", depois da reserva confirmada */
+.btn-novo {
+  width: 100%;
+  margin-top: 24px;
+  padding: 0 16px;
 }
 
 /* =====================================================================
