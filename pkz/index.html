@@ -45,6 +45,7 @@
     <!-- Botão hambúrguer: só aparece no celular (CSS, seção 0.9) -->
     <button
       class="hamburguer"
+      type="button"
       id="ham"
       aria-label="Abrir menu"
       aria-controls="menuSm"
@@ -70,6 +71,9 @@
       </ul>
     </nav>
   </header>
+<!-- Conteúdo principal da página (todas as seções entre o header e o footer) -->
+<main>
+
   <!-- ===== HOME PLAYMAKERZ — Arthur ===== -->
 <section class="pagina" id="inicio">
   <div class="duas-colunas home-hero">
@@ -161,37 +165,37 @@
 
 <!-- ===== INFORMAÇÕES SOBRE TREINOS PLAYMAKERZ — Igor ===== -->
 <section class="pagina" id="treinos">
-  <p class="eyebrow">Play Makerz · Treinos</p>
-
-  <h2 class="titulo-pagina">Informações sobre treinos</h2>
-
-  <p>
-    Sessões individuais, com programa montado por idade e modalidade
-    e acompanhamento a cada treino.
-  </p>
+  <header>
+    <p class="eyebrow">Play Makerz · Treinos</p>
+    <h2 class="titulo-pagina">Informações sobre treinos</h2>
+    <p class="texto-lead treinos-intro">
+      Sessões individuais, com programa montado por idade e modalidade
+      e acompanhamento a cada treino.
+    </p>
+  </header>
 
   <div class="treinos-cards">
-    <article class="treino-card">
+    <article class="card treino-card">
       <p class="eyebrow">Avaliação</p>
-      <h3>Ponto de partida</h3>
+      <h2>Ponto de partida</h2>
       <p>
         Primeira sessão para entender nível, histórico esportivo
         e objetivo do atleta.
       </p>
     </article>
 
-    <article class="treino-card">
+    <article class="card treino-card">
       <p class="eyebrow">Programa</p>
-      <h3>Por idade e modalidade</h3>
+      <h2>Por idade e modalidade</h2>
       <p>
         Força, velocidade, coordenação e desenvolvimento atlético
         na dose certa para cada fase.
       </p>
     </article>
 
-    <article class="treino-card">
+    <article class="card treino-card">
       <p class="eyebrow">Acompanhamento</p>
-      <h3>Um profissional por atleta</h3>
+      <h2>Um profissional por atleta</h2>
       <p>
         Horários flexíveis, evolução registrada e ajuste do programa
         sessão a sessão.
@@ -325,7 +329,7 @@
       <fieldset class="agenda-grupo">
         <legend class="label-oculta">Escolha o horário</legend>
         <header class="agenda-subtitulo">
-          <h2><time id="agenda-data"></time></h2>
+          <h2><time id="agenda-data">Carregando dias…</time></h2>
           <ul class="legenda">
             <li><span class="legenda-cor legenda-livre"></span>Livre</li>
             <li><span class="legenda-cor legenda-ocupado"></span>Ocupado</li>
@@ -364,6 +368,8 @@
     </aside>
   </div>
 </section>
+
+</main>
 
 <!-- ===== FOOTER (nav) — só no final da página: logo | links das seções | redes sociais | copyright ===== -->
   <footer class="rodape">

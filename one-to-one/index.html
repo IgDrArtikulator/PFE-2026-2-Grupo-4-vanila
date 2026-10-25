@@ -44,6 +44,7 @@
         <!-- Botão hambúrguer: só aparece no celular (CSS, seção 0.9) -->
         <button
             class="hamburguer"
+            type="button"
             id="ham"
             aria-label="Abrir menu"
             aria-controls="menuSm"
@@ -69,6 +70,9 @@
             </ul>
         </nav>
     </header>
+
+<!-- Conteúdo principal da página (todas as seções entre o header e o footer) -->
+<main>
 
 <!-- ===== HOME — Arthur ===== -->
 <section class="pagina" id="inicio">
@@ -135,7 +139,7 @@
   </header>
 
   <!-- 3 cards em grid (3 colunas no desktop, 1 no celular) -->
-  <div class="treinos-grid">
+  <div class="treinos-cards">
     <article class="card treino-card">
       <p class="eyebrow">Avaliação</p>
       <h2>Ponto de partida</h2>
@@ -290,7 +294,7 @@
       <h2 class="atendimento-unidade">Unidade 1 - Armando Lombardi</h2>
       <address>Av Armando Lombardi, 949 - Loja G - Horários a Combinar</address>
       <div class="atendimento-botoes">
-        <a class="btn btn-primario btn-pesado" href="#cadastro">Fazer cadastro</a>
+        <a class="btn btn-primario btn-pesado" href="#agendamento">Agendar aula experimental</a>
         <a class="btn btn-contorno btn-pesado" href="#unidades">Ver unidades</a>
       </div>
     </article>
@@ -321,7 +325,7 @@
       <fieldset class="agenda-grupo">
         <legend class="label-oculta">Escolha o horário</legend>
         <header class="agenda-subtitulo">
-          <h2><time id="agenda-data"></time></h2>
+          <h2><time id="agenda-data">Carregando dias…</time></h2>
           <span id="agenda-livres"></span>
         </header>
         <!-- Horários do dia escolhido: criados pelo js/agendamento.js -->
@@ -363,6 +367,8 @@
   </div>
 </section>
 
+</main>
+
   <!-- ===== FOOTER (nav) — só no final da página: logo | links das seções | redes sociais | copyright ===== -->
   <footer class="rodape">
     <a class="rodape-logo" href="#inicio">
@@ -390,7 +396,7 @@
           <a href="#contato">Contato</a>
         </li>
         <li>
-          <a href="hub/index.html">Hub PKZ</a>
+          <a href="../hub/index.html">Hub PKZ</a>
         </li>
       </ul>
     </nav>
