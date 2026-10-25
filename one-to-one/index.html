@@ -20,7 +20,7 @@
 </head>
 <body>
 
-    <!-- ===== HEADER Arthur ===== -->
+    <!-- ===== HEADER ===== -->
     <header class="cabecalho">
         <a class="logo" href="#inicio">
             <img src="img-oto/logo-one-to-one.png" alt="One to One Studio">
@@ -74,7 +74,7 @@
 <!-- Conteúdo principal da página (todas as seções entre o header e o footer) -->
 <main>
 
-<!-- ===== HOME — Arthur ===== -->
+<!-- ===== HOME ===== -->
 <section class="pagina" id="inicio">
   <div class="duas-colunas home-hero">
 
@@ -99,7 +99,7 @@
   </div>
 </section>
 
-<!-- ===== SOBRE NÓS — Igor ===== -->
+<!-- ===== SOBRE NÓS ===== -->
 <section class="pagina" id="sobre">
   <p class="eyebrow">One to One · Sobre</p>
   <div class="duas-colunas">
@@ -127,7 +127,7 @@
     </figure>
   </div>
 </section>
-<!-- ===== INFORMAÇÕES SOBRE TREINOS — Igor ===== -->
+<!-- ===== INFORMAÇÕES SOBRE TREINOS ===== -->
 <section class="pagina" id="treinos">
   <header>
     <p class="eyebrow">One to One · Treinos</p>
@@ -167,7 +167,7 @@
     </article>
   </div>
 </section>
-<!-- ===== PLANOS / AULA GRATUITA EXPERIMENTAL — Mateus =====
+<!-- ===== PLANOS / AULA GRATUITA EXPERIMENTAL =====
      Página toda centralizada (flex em coluna) -->
 <section class="pagina planos" id="planos">
   <header>
@@ -184,8 +184,8 @@
     <li class="passo">
       <span class="passo-numero">1</span>
       <div>
-        <h2>Agende pelo WhatsApp</h2>
-        <p>Escolha o horário que se encaixa na sua rotina.</p>
+        <h2>Agende pelo site</h2>
+        <p>Escolha o dia e o horário que se encaixam na sua rotina.</p>
       </div>
     </li>
     <li class="passo">
@@ -205,7 +205,7 @@
   </ol>
 </section>
 
-<!-- ===== UNIDADES E LOCALIZAÇÃO — Mateus ===== -->
+<!-- ===== UNIDADES E LOCALIZAÇÃO ===== -->
 <section class="pagina" id="unidades">
   <header>
     <p class="eyebrow">One to One · Unidades</p>
@@ -215,7 +215,7 @@
     <article>
       <h2 class="unidade-nome">Unidade 1 - Armando Lombardi</h2>
       <!-- address = dados de contato/endereço (elemento semântico) -->
-      <address class="unidade-endereco">Av Armando Lombardi, 949 - Loja G · Horários que se encaixam na sua rotina!</address>
+      <address class="unidade-endereco">Avenida Armando Lombardi, 949 - Loja G, Barra da Tijuca, Rio de Janeiro - RJ, CEP 22640-020</address>
     </article>
     <!-- Mapa do Google embutido com iframe -->
     <iframe class="mapa"
@@ -225,7 +225,7 @@
   </div>
 </section>
 
-<!-- GALERIA DE FOTOS E VÍDEOS — Rodrigo -->
+<!-- GALERIA DE FOTOS E VÍDEOS -->
 <section class="pagina" id="galeria">
     <header>
         <p class="eyebrow">One to One · Galeria</p>
@@ -251,7 +251,7 @@
     </div>
 </section>
 
-<!-- ===== CONTATE-NOS — Guilherme ===== -->
+<!-- ===== CONTATE-NOS ===== -->
 <section class="pagina" id="contato">
   <header>
     <p class="eyebrow">One to One · Contato</p>
@@ -292,7 +292,7 @@
       <p class="eyebrow">Atendimento</p>
       <p>Segunda a sábado, por horário marcado. Respondemos em horário comercial.</p>
       <h2 class="atendimento-unidade">Unidade 1 - Armando Lombardi</h2>
-      <address>Av Armando Lombardi, 949 - Loja G - Horários a Combinar</address>
+      <address>Avenida Armando Lombardi, 949 - Loja G, Barra da Tijuca, Rio de Janeiro - RJ, CEP 22640-020</address>
       <div class="atendimento-botoes">
         <a class="btn btn-primario btn-pesado" href="#agendamento">Agendar aula experimental</a>
         <a class="btn btn-contorno btn-pesado" href="#unidades">Ver unidades</a>
@@ -301,7 +301,7 @@
   </div>
 </section>
 
-<!-- ===== AGENDAMENTO — Lucas =====
+<!-- ===== AGENDAMENTO =====
      Dias e horários são inputs radio dentro de labels (pareamento por encapsulamento).
      O selecionado fica azul pelo CSS (:checked + span) e os ocupados usam disabled.
      O js/agendamento.js cria os cards dos dias e a grade de horários, atualiza o
@@ -354,7 +354,7 @@
         <input class="campo" type="email" id="ag-email" name="email" placeholder="E-mail" autocomplete="email" required>
 
         <label class="label-oculta" for="ag-telefone">Telefone</label>
-        <input class="campo" type="tel" id="ag-telefone" name="telefone" placeholder="Telefone" autocomplete="tel" required>
+        <input class="campo" type="tel" id="ag-telefone" name="telefone" placeholder="Telefone" autocomplete="tel" pattern="[0-9 \(\)\+\-]{10,}" title="Digite o número com DDD, ex.: (21) 99999-9999" required>
 
         <button class="btn btn-primario btn-enviar" type="submit">Enviar</button>
       </form>
@@ -362,7 +362,7 @@
       <p class="confirmar-status" id="confirmar-status" role="status"></p>
       <!-- Aparece depois da reserva confirmada -->
       <button class="btn btn-contorno btn-novo" id="agendar-novo" type="button" hidden>Novo agendamento</button>
-      <p class="confirmar-aviso">Você receberá a confirmação do agendamento por e-mail.</p>
+      <p class="confirmar-aviso">Nossa equipe entrará em contato para confirmar o agendamento.</p>
     </aside>
   </div>
 </section>

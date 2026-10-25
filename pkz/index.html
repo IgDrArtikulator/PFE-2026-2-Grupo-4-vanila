@@ -74,7 +74,7 @@
 <!-- Conteúdo principal da página (todas as seções entre o header e o footer) -->
 <main>
 
-  <!-- ===== HOME PLAYMAKERZ — Arthur ===== -->
+  <!-- ===== HOME PLAYMAKERZ ===== -->
 <section class="pagina" id="inicio">
   <div class="duas-colunas home-hero">
 
@@ -101,7 +101,7 @@
 
 
 
-<!-- ===== SOBRE NÓS PLAYMAKERZ — Igor ===== -->
+<!-- ===== SOBRE NÓS PLAYMAKERZ ===== -->
 <section class="pagina" id="sobre">
   <p class="eyebrow">Play Makerz · Sobre</p>
 
@@ -132,7 +132,7 @@
     </figure>
   </div>
 </section>
-<!-- ===== PLANOS PLAYMAKERZ — Mateus =====
+<!-- ===== PLANOS PLAYMAKERZ =====
      3 cards em grid; o do meio (aula grátis) fica em destaque -->
 <section class="pagina" id="planos">
   <header>
@@ -145,8 +145,9 @@
     <article class="card plano-card">
       <h2>Fale com a equipe para receber o orçamento</h2>
       <p>Enviamos os valores pelo WhatsApp de acordo com o pacote escolhido.</p>
-      <!-- Trocar pelo link wa.me com o número real da PKZ quando o cliente passar -->
-      <a class="btn btn-contorno" href="#contato">Falar no WhatsApp</a>
+      <!-- Leva para a seção Contato (WhatsApp, Instagram e e-mail).
+           Quando o cliente passar o número da PKZ, trocar por https://wa.me/55DDDNUMERO -->
+      <a class="btn btn-contorno" href="#contato">Falar com a equipe</a>
     </article>
 
     <article class="card plano-card plano-destaque">
@@ -163,7 +164,7 @@
   </div>
 </section>
 
-<!-- ===== INFORMAÇÕES SOBRE TREINOS PLAYMAKERZ — Igor ===== -->
+<!-- ===== INFORMAÇÕES SOBRE TREINOS PLAYMAKERZ ===== -->
 <section class="pagina" id="treinos">
   <header>
     <p class="eyebrow">Play Makerz · Treinos</p>
@@ -203,7 +204,7 @@
     </article>
   </div>
 </section>
-<!-- ===== UNIDADES E LOCALIZAÇÃO PLAYMAKERZ — Matheus ===== -->
+<!-- ===== UNIDADES E LOCALIZAÇÃO PLAYMAKERZ ===== -->
 <section class="pagina" id="unidades">
   <header>
     <p class="eyebrow">Play Makerz · Unidades</p>
@@ -223,10 +224,8 @@
   </div>
 </section>
 
-<!-- GALERIA PLAYMAKERZ — Rodrigo
-     Grid de 4 colunas.
-     Adicione as imagens dentro de cada <figure>
-     usando <img src="img/..." alt="..." loading="lazy">.
+<!-- GALERIA PLAYMAKERZ
+     Grid de 4 colunas com as fotos da pasta img-pkz/.
 -->
 
 <section class="pagina" id="galeria">
@@ -258,7 +257,7 @@
 
 </section>
 
-<!-- ===== CONTATE-NOS PLAYMAKERZ — Guilherme ===== -->
+<!-- ===== CONTATE-NOS PLAYMAKERZ ===== -->
 <section class="pagina" id="contato">
   <header>
     <p class="eyebrow">Play Makerz · Contato</p>
@@ -304,7 +303,7 @@
   </ul>
 </section>
 
-<!-- ===== AGENDAMENTO PLAYMAKERZ — Lucas =====
+<!-- ===== AGENDAMENTO PLAYMAKERZ =====
      Mesma lógica da One to One: radios dentro de labels, selecionado pelo
      CSS (:checked + span), ocupados com disabled. Diferença do design:
      a legenda Livre/Ocupado fica na linha do subtítulo.
@@ -357,7 +356,7 @@
         <input class="campo" type="email" id="pkz-ag-email" name="email" placeholder="E-mail" autocomplete="email" required>
 
         <label class="label-oculta" for="pkz-ag-whatsapp">WhatsApp</label>
-        <input class="campo" type="tel" id="pkz-ag-whatsapp" name="whatsapp" placeholder="WhatsApp" autocomplete="tel" required>
+        <input class="campo" type="tel" id="pkz-ag-whatsapp" name="whatsapp" placeholder="WhatsApp" autocomplete="tel" pattern="[0-9 \(\)\+\-]{10,}" title="Digite o número com DDD, ex.: (21) 99999-9999" required>
 
         <button class="btn btn-primario btn-enviar" type="submit">Enviar</button>
       </form>

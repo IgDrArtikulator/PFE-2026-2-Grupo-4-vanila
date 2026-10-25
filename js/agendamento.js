@@ -1,5 +1,5 @@
 /* =====================================================================
-   AGENDAMENTO — Lucas
+   AGENDAMENTO
    Script das duas marcas: one-to-one/index.html e pkz/index.html.
    1. Cria os cards dos próximos 6 dias de atendimento (seg. a sáb.).
    2. Mostra os horários do dia escolhido (livres e ocupados).

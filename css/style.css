@@ -1,5 +1,5 @@
 /* =====================================================================
-   0. CONFIGURAÇÕES GLOBAIS — Arthur
+   0. CONFIGURAÇÕES GLOBAIS
    Variáveis, reset, tipografia, botões, campos de formulário,
    cards, placeholders, header (nav) e footer (nav).
    ===================================================================== */
@@ -310,21 +310,6 @@ ol {
   border-radius: var(--raio-card);
 }
 
-/* Caixa cinza com texto no meio: lugar da foto/vídeo até termos as mídias reais */
-.placeholder {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--cor-placeholder);
-  border: 1px solid #222222;
-  border-radius: var(--raio-card);
-  font-family: var(--fonte-condensada);
-  font-size: 16px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #6f6f6f;
-}
-
 
 /* Fotos reais dentro das <figure> (hero, equipe e galeria) */
 .foto {
@@ -525,11 +510,7 @@ ol {
   letter-spacing: 0.15em;
 }
 
-.pkz .placeholder {
-  border-color: #22225c;
-  color: #6c6ca0;
-}
- /* ===1. HOME — Arthur === */
+ /* ===1. HOME === */
 
 /* Coluna do texto um pouco mais larga que a da foto (3 partes x 2 partes) */
 .home-hero {
@@ -610,7 +591,7 @@ ol {
   }
 }
 /* =====================================================================
-   2. SOBRE + TREINOS — Igor
+   2. SOBRE + TREINOS
    Seções #sobre e #treinos de one-to-one/index.html e pkz/index.html
    ===================================================================== */
 
@@ -752,7 +733,7 @@ ol {
   padding-top: 16px;
 }
 /* =====================================================================
-   3. PLANOS + UNIDADES — Mateus
+   3. PLANOS + UNIDADES
    Seções #planos e #unidades de one-to-one/index.html e pkz/index.html
    ===================================================================== */
 
@@ -964,8 +945,8 @@ ol {
   }
 }
 /* =====================================================================
-   4. CONTATO + CADASTRO — Guilherme
-   Seções #contato e #cadastro de one-to-one/index.html e pkz/index.html
+   4. CONTATO
+   Seção #contato de one-to-one/index.html e pkz/index.html
    ===================================================================== */
 
 /* ----- 4.1 Contate-nos ----- */
@@ -1093,33 +1074,6 @@ ol {
   padding: 0 38px;
 }
 
-/* ----- 4.2 Cadastro de alunos ----- */
-.cadastro-texto {
-  max-width: 540px;
-}
-
-.cadastro-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  max-width: 560px;
-}
-
-.cadastro-botoes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 12px;
-}
-
-/* fieldset sem a borda padrão do navegador */
-.cadastro-form fieldset {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  border: 0;
-}
-
 /* ----- 4.3 Contato Playmakerz: 3 cards em linha ----- */
 .contato-grid {
   display: grid;
@@ -1150,28 +1104,6 @@ ol {
   border-radius: 50%;
   font-size: 22px;
   color: #01012e;
-}
-
-/* ----- 4.4 Cadastro Playmakerz ----- */
-.pkz .cadastro-texto {
-  max-width: 560px;
-}
-
-.pkz .cadastro-form fieldset {
-  gap: 20px;
-}
-
-.pkz .cadastro-form .campo {
-  height: 60px;
-}
-
-.pkz .cadastro-botoes {
-  margin-top: 10px;
-}
-
-.pkz .cadastro-botoes .btn {
-  height: 60px;
-  padding: 0 40px;
 }
 
 /* ----- Responsividade / Media Queries ----- */
@@ -1212,7 +1144,7 @@ ol {
 }
 
 /* =====================================================================
-   5. AGENDAMENTO — Lucas
+   5. AGENDAMENTO
    Seção #agendamento de one-to-one/index.html e pkz/index.html
    Dias e horários são inputs radio criados pelo js/agendamento.js.
    O item marcado fica azul com o seletor :checked + combinador "+"
@@ -1497,7 +1429,7 @@ ol {
 
 .pkz .dia span {
   height: 92px;
-  font-family: Arial, sans-serif;
+  font-family: var(--fonte-texto);
   color: #a8a8d0;
   border-color: #2a2a6a;
 }
@@ -1515,7 +1447,7 @@ ol {
 
 .pkz .agenda-subtitulo {
   margin-bottom: 16px;
-  font-family: Arial, sans-serif;
+  font-family: var(--fonte-texto);
   font-weight: 700;
 }
 
@@ -1539,7 +1471,7 @@ ol {
 
 .pkz .horario span {
   height: 52px;
-  font-family: Arial, sans-serif;
+  font-family: var(--fonte-texto);
   font-weight: 700;
   font-size: 18px;
 }
@@ -1558,13 +1490,13 @@ ol {
 }
 
 .pkz .confirmar-rotulo {
-  font-family: Arial, sans-serif;
+  font-family: var(--fonte-texto);
   font-weight: 400;
   font-size: 15px;
 }
 
 .pkz .confirmar-titulo {
-  font-family: Arial, sans-serif;
+  font-family: var(--fonte-texto);
   font-weight: 700;
   font-size: 38px;
   margin-bottom: 24px;
@@ -1647,7 +1579,7 @@ ol {
 }
 
 /* =====================================================================
-   6. GALERIA — Rodrigo
+   6. GALERIA
    Seção #galeria de one-to-one/index.html e pkz/index.html
 ===================================================================== */
 
@@ -1685,7 +1617,7 @@ ol {
 
 
 /* =====================================================================
-   HUB — Caio
+   HUB
    Arquivo: hub/index.html
    Visual próprio do Hub: creme + lilás, fonte Barlow Condensed.
    ===================================================================== */
@@ -1846,7 +1778,7 @@ ol {
     padding-bottom: 120px; /* espaço entre o botão e a linha de baixo */
 }
 
-/* Foto de fundo ocupando o hero inteiro (placeholder por enquanto) */
+/* Foto de fundo ocupando o hero inteiro */
 .hub-hero-foto {
     position: absolute;
     top: 0;

@@ -1,5 +1,5 @@
 /* =====================================================================
-   MENU HAMBÚRGUER — Arthur
+   MENU HAMBÚRGUER
    Usado em one-to-one/index.html e pkz/index.html.
    Código do material do professor (hamburguer/script.js), sem alterações:
    abre/fecha o menu do celular, fecha ao clicar fora e com a tecla ESC.
