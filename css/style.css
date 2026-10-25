@@ -2059,7 +2059,8 @@ ol {
 .hub-videos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 14px;
+    gap: 24px;
+    margin-top: 24px; /* espaço entre o vídeo principal e os 3 vídeos menores */
 }
 
 .hub-video {
