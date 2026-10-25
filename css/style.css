@@ -109,6 +109,70 @@ ol {
   color: var(--cor-azul);
 }
 
+/* ---------- Menu hambúrguer (celular) ----------
+   Baseado no styles.css do material do professor (pasta hamburguer).
+   Mudanças: cores pelas variáveis do tema, top = altura do .cabecalho
+   e o menu fica DENTRO do header fixo, para abrir logo abaixo dele. */
+
+/* Botão: escondido no desktop */
+.hamburguer {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: var(--cor-texto);
+  margin: 4px 0;
+}
+
+/* Menu do celular */
+.menu-small {
+  position: absolute;
+  top: 72px;               /* altura do .cabecalho */
+  left: 0;
+  width: 100%;
+  background: var(--cor-fundo);
+  border-bottom: 1px solid var(--cor-borda);
+
+  display: none;
+  flex-direction: column;
+  padding: 24px var(--margem);
+
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.menu-small.activated {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.nav-links-small {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nav-links-small a {
+  font-family: var(--fonte-titulo);
+  font-weight: 800;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.nav-links-small a:hover {
+  color: var(--cor-azul);
+}
+
 
 /* ---------- 0.4 Seções da página e tipografia comum ---------- */
 /* Cada <section class="pagina"> é uma parte da página que rola (Home, Sobre, Treinos...). */
@@ -348,12 +412,13 @@ ol {
 
 /* Celulares */
 @media (max-width: 767px) {
+  /* Celular: esconde o menu desktop e mostra o hambúrguer */
   .cabecalho-links {
-    gap: 18px;
+    display: none;
   }
 
-  .cabecalho-links a {
-    font-size: 12px;
+  .hamburguer {
+    display: flex;
   }
 
   .pagina {
@@ -407,6 +472,11 @@ ol {
 .pkz .cabecalho-links a {
   font-weight: 400;
   font-size: 16px;
+}
+
+/* Menu do celular na PKZ: mesma condensada fina */
+.pkz .nav-links-small a {
+  font-weight: 400;
 }
 
 /* Títulos da PKZ são mais leves que os da One to One */
@@ -1698,6 +1768,30 @@ ol {
     color: #10103a;
 }
 
+/* Menu hambúrguer no Hub: mesmo .hamburguer/.menu-small da seção 0.3,
+   só com as cores e a fonte do Hub */
+.hub .bar {
+    background-color: var(--hub-creme);
+}
+
+.hub .menu-small {
+    z-index: 10; /* por cima do hero */
+    background: var(--hub-fundo);
+    border-bottom: 1px solid var(--hub-linha);
+    padding: 24px var(--hub-margem);
+}
+
+.hub .nav-links-small a {
+    font-family: var(--hub-corpo);
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.15em;
+}
+
+.hub .nav-links-small a:hover {
+    color: var(--hub-lilas);
+}
+
 /* ----- 7.3 Hero ----- */
 /* Hero ocupa a tela (menos o header) com o texto centralizado na altura */
 .hub-hero {
@@ -2073,8 +2167,13 @@ ol {
         font-size: 11px;
     }
 
+    /* Celular: esconde os links e mostra o hambúrguer */
     .hub-links {
-        gap: 14px;
+        display: none;
+    }
+
+    .hamburguer {
+        display: flex;
     }
 
     .hub-titulo {

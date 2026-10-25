@@ -17,14 +17,49 @@
 <body class="hub">
     <!-- HEADER (nav) do Hub: links no centro + botão -->
     <header class="hub-cabecalho">
+        <!-- Botão hambúrguer: só aparece no celular (CSS, seção 7.7) -->
+        <button
+            class="hamburguer"
+            id="ham"
+            aria-label="Abrir menu"
+            aria-controls="menuSm"
+            aria-expanded="false"
+        >
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <!-- Menu desktop -->
         <nav aria-label="Navegação do Hub">
             <ul class="hub-links">
-                <li><a class="hub-link ativo" href="#inicio">Início</a></li>
-                <li><a class="hub-link" href="#escolha">Escolha</a></li>
-                <li><a class="hub-link" href="#videos">Vídeos</a></li>
+                <li>
+                    <a class="hub-link ativo" href="#inicio">Início</a>
+                </li>
+                <li>
+                    <a class="hub-link" href="#escolha">Escolha</a>
+                </li>
+                <li>
+                    <a class="hub-link" href="#videos">Vídeos</a>
+                </li>
             </ul>
         </nav>
         <a class="hub-link hub-cta" href="#escolha">Escolha sua jornada</a>
+
+        <!-- Menu do celular: abre e fecha com o js/menu.js -->
+        <nav class="menu-small" id="menuSm" aria-label="Navegação do Hub (celular)">
+            <ul class="nav-links-small">
+                <li>
+                    <a class="hub-link" href="#inicio">Início</a>
+                </li>
+                <li>
+                    <a class="hub-link" href="#escolha">Escolha</a>
+                </li>
+                <li>
+                    <a class="hub-link" href="#videos">Vídeos</a>
+                </li>
+            </ul>
+        </nav>
     </header>
 
     <main>
@@ -186,5 +221,8 @@
 
         <p class="hub-rodape-copy">&copy; 2026 PKZ &amp; One to One Studio</p>
     </footer>
+
+    <!-- Menu hambúrguer (igual ao material do professor: script no fim do body) -->
+    <script src="../js/menu.js"></script>
 </body>
 </html>

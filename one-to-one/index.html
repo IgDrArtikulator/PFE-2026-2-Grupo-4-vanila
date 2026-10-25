@@ -26,6 +26,7 @@
             <img src="img-oto/logo-one-to-one.png" alt="One to One Studio">
         </a>
 
+        <!-- Menu desktop -->
         <nav aria-label="Navegação principal">
             <ul class="cabecalho-links">
                 <li>
@@ -36,6 +37,34 @@
                 </li>
                 <li>
                     <a href="../hub/index.html">Hub</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Botão hambúrguer: só aparece no celular (CSS, seção 0.9) -->
+        <button
+            class="hamburguer"
+            id="ham"
+            aria-label="Abrir menu"
+            aria-controls="menuSm"
+            aria-expanded="false"
+        >
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <!-- Menu do celular: abre e fecha com o js/menu.js -->
+        <nav class="menu-small" id="menuSm" aria-label="Navegação principal (celular)">
+            <ul class="nav-links-small">
+                <li>
+                  <a href="../pkz/index.html">Playmakerz</a>
+                </li>
+                <li>
+                  <a href="#inicio">One to One</a>
+                </li>
+                <li>
+                  <a href="../hub/index.html">Hub</a>
                 </li>
             </ul>
         </nav>
@@ -385,5 +414,7 @@
     <p class="rodape-copy">&copy; 2026 PKZ · One to One Studio</p>
   </footer>
 
+    <!-- Menu hambúrguer (igual ao material do professor: script no fim do body) -->
+    <script src="../js/menu.js"></script>
 </body>
 </html>
