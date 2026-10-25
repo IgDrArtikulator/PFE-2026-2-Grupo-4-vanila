@@ -326,6 +326,20 @@ ol {
 }
 
 
+/* Fotos reais dentro das <figure> (hero, equipe e galeria) */
+.foto {
+  overflow: hidden;                 /* a imagem respeita os cantos arredondados */
+  border-radius: var(--raio-card);
+  background-color: var(--cor-placeholder);
+}
+
+/* object-fit: cover = a imagem preenche a caixa toda sem distorcer (corta as sobras) */
+.foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* ---------- 0.8 Footer (nav) — no final da página, depois da última seção ---------- */
 /* Linha de cima: logo | links | redes sociais. Linha de baixo: copyright.
    flex-wrap deixa o copyright (100% de largura) cair para a linha de baixo. */
@@ -1790,6 +1804,34 @@ ol {
 
 .hub .nav-links-small a:hover {
     color: var(--hub-lilas);
+}
+
+/* Imagens do Hub: preenchem a caixa inteira, por baixo do selo, do play e da legenda */
+.hub-hero-foto img,
+.hub-foto img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hub .hub-foto {
+    overflow: hidden;
+    border: 0; /* tira o tracejado do placeholder (.hub na frente = vale mais que a regra .hub-foto da 7.4) */
+}
+
+/* Selo, botão play e legendas ficam por cima da foto */
+.hub-selo,
+.hub-play,
+.hub-video-legenda,
+.hub-video figcaption {
+    z-index: 1;
+}
+
+.hub-video-principal .hub-play {
+    position: relative; /* z-index só funciona em elemento posicionado */
 }
 
 /* ----- 7.3 Hero ----- */
