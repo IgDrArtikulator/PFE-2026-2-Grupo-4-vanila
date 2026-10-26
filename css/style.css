@@ -1754,16 +1754,11 @@ ol {
     border: 0; /* tira o tracejado do placeholder (.hub na frente = vale mais que a regra .hub-foto da 7.4) */
 }
 
-/* Selo, botão play e legendas ficam por cima da foto */
+/* Selo e legendas ficam por cima da foto */
 .hub-selo,
-.hub-play,
 .hub-video-legenda,
 .hub-video figcaption {
     z-index: 1;
-}
-
-.hub-video-principal .hub-play {
-    position: relative; /* z-index só funciona em elemento posicionado */
 }
 
 /* ----- 7.3 Hero ----- */
@@ -1957,22 +1952,10 @@ ol {
     color: #0e2a30;
 }
 
-/* ----- 7.5 Vídeos ----- */
+/* ----- 7.5 Fotos (Veja a gente em ação) ----- */
 .hub-video-principal {
     position: relative;
-    margin-top: 24px; /* espaço entre o título "VEJA A GENTE EM AÇÃO" e o vídeo */
-}
-
-/* Botão play redondo no centro */
-.hub-play {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 72px;
-    height: 72px;
-    border: 1px solid var(--hub-creme);
-    border-radius: 50%;
-    font-size: 20px;
+    margin-top: 24px; /* espaço entre o título "VEJA A GENTE EM AÇÃO" e a foto */
 }
 
 /* Legenda "UM DIA DE TREINO" no canto inferior esquerdo */
@@ -1987,29 +1970,17 @@ ol {
     text-transform: uppercase;
 }
 
-/* 3 vídeos menores numa grade de 4 colunas (4ª fica vazia, como no design) */
+/* 3 fotos menores numa grade de 4 colunas (4ª fica vazia, como no design) */
 .hub-videos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
-    margin-top: 24px; /* espaço entre o vídeo principal e os 3 vídeos menores */
+    margin-top: 24px; /* espaço entre a foto principal e as 3 fotos menores */
 }
 
 .hub-video {
     position: relative;
     height: 330px;
-}
-
-/* Play pequeno no canto superior direito */
-.hub-video .hub-play {
-    position: absolute;
-    top: 14px;
-    right: 14px;
-    width: 36px;
-    height: 36px;
-    font-size: 12px;
-    background-color: #0e0d0d;
-    border-color: #0e0d0d;
 }
 
 .hub-video figcaption {
