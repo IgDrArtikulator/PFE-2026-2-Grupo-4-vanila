@@ -57,9 +57,9 @@ function mostrarFotoGaleria(indice) {
     }
   });
 
-  // A legenda é o próprio texto alternativo (alt) da foto
+  // A legenda vem do data-legenda da foto (o alt continua descrevendo a imagem)
   const imagem = slidesGaleria[indice].querySelector("img");
-  legendaGaleria.textContent = imagem.getAttribute("alt");
+  legendaGaleria.textContent = imagem.dataset.legenda || imagem.getAttribute("alt");
   contadorGaleria.textContent =
     doisDigitos(indice + 1) + " / " + doisDigitos(slidesGaleria.length);
 }
