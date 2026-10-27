@@ -1976,7 +1976,7 @@ ol {
     color: #10103a;
 }
 
-/* Controles do slider (só visual por enquanto, JS depois) */
+/* Controles do slider (setas e tracinhos funcionam com o js/hub.js) */
 .hub-slider {
     position: absolute;
     right: var(--hub-margem); /* alinhado com a borda direita do conteúdo */
@@ -1987,18 +1987,60 @@ ol {
     font-size: 20px;
 }
 
+/* O atributo hidden esconde o slider até o JS carregar */
+.hub-slider[hidden] {
+    display: none;
+}
+
+.hub-slider-tracos {
+    display: flex;
+    gap: 8px;
+}
+
+/* Tracinho */
 .hub-slider-traco {
     width: 14px;
-    height: 2px;
+    height: 22px;
+    padding: 10px 0;
+    border: 0;
     background-color: #555555;
+    background-clip: content-box;
+    cursor: pointer;
 }
 
 .hub-slider-traco.ativo {
     background-color: var(--hub-lilas);
 }
 
+/* Setas ‹ ›: botão sem o visual padrão do navegador */
 .hub-slider-seta {
-    margin: 0 18px;
+    margin: 0 10px;
+    padding: 4px 8px;
+    background: none;
+    border: 0;
+    font: inherit;    /* herda o font-size de 20px do .hub-slider */
+    color: inherit;
+    cursor: pointer;
+}
+
+.hub-slider-seta:hover {
+    color: var(--hub-lilas);
+}
+
+.hub-slider-traco:focus-visible,
+.hub-slider-seta:focus-visible {
+    outline: 2px solid var(--hub-lilas);
+    outline-offset: 3px;
+}
+
+/* Troca da foto do hero: o js/hub.js põe a classe "trocando" (foto some),
+troca o src e tira a classe (foto nova aparece) */
+.hub-hero-foto img {
+    transition: opacity 0.3s;
+}
+
+.hub-hero-foto img.trocando {
+    opacity: 0;
 }
 
 /* ----- 7.4 Escolha sua jornada ----- */

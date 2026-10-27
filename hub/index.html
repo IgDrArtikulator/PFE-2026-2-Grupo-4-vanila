@@ -66,9 +66,9 @@
     <main>
         <!-- Hero -->
         <section class="hub-hero hub-container" id="inicio">
-            <!-- Foto de fundo do hero -->
+            <!-- Foto de fundo do hero: o js/hub.js troca o src e o alt -->
             <figure class="hub-hero-foto">
-                <img src="../img/hub-hero.webp" alt="Atleta jovem e atleta adulto treinando lado a lado">
+                <img id="hero-foto" src="../img/hub-hero.webp" alt="Atleta jovem e atleta adulto treinando lado a lado">
             </figure>
 
             <header class="hub-hero-conteudo">
@@ -78,14 +78,13 @@
                 <a class="hub-link hub-btn hub-btn-lilas" href="#escolha">Escolha sua jornada &darr;</a>
             </header>
 
-            <!-- Controles do slider: só visual por enquanto (troca de foto via JavaScript) -->
-            <div class="hub-slider" aria-hidden="true">
-                <span class="hub-slider-seta">&lsaquo;</span>
-                <span class="hub-slider-traco ativo"></span>
-                <span class="hub-slider-traco"></span>
-                <span class="hub-slider-traco"></span>
-                <span class="hub-slider-traco"></span>
-                <span class="hub-slider-seta">&rsaquo;</span>
+            <!-- Controles do slider: o js/hub.js troca a foto de fundo.
+                 hidden = escondido até o JS carregar (sem JS as setas não fariam nada) -->
+            <div class="hub-slider" id="hero-slider" hidden>
+                <button class="hub-slider-seta" type="button" id="hero-anterior" aria-label="Foto anterior">&lsaquo;</button>
+                <!-- Um tracinho para cada foto: criados pelo js/hub.js -->
+                <div class="hub-slider-tracos" id="hero-tracos"></div>
+                <button class="hub-slider-seta" type="button" id="hero-proxima" aria-label="Próxima foto">&rsaquo;</button>
             </div>
         </section>
 
@@ -220,5 +219,8 @@
 
     <!-- Menu hambúrguer (igual ao material do professor: script no fim do body) -->
     <script src="../js/menu.js"></script>
+
+    <!-- Slider do hero (troca da foto de fundo) -->
+    <script src="../js/hub.js"></script>
 </body>
 </html>

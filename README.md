@@ -30,7 +30,9 @@ Feito só com **HTML, CSS e JavaScript puros** (sem frameworks).
 ├── css/style.css           # CSS único das 3 páginas
 └── js/
     ├── menu.js             # Menu hambúrguer (celular)
-    └── agendamento.js      # Dias, horários e reservas do agendamento
+    ├── agendamento.js      # Dias, horários e reservas do agendamento
+    ├── planos.js           # Cards de planos da PKZ e da One to One
+    └── hub.js              # Slider da foto do hero no Hub
 ```
 
 ## Como funciona
@@ -38,6 +40,8 @@ Feito só com **HTML, CSS e JavaScript puros** (sem frameworks).
 - **Um CSS para as duas marcas:** as cores e fontes ficam em variáveis (`:root`). A página da PKZ usa `<body class="pkz">`, que troca os valores das variáveis para azul-marinho e dourado.
 - **Responsivo:** abaixo de 767px os links do header viram um menu hambúrguer (`js/menu.js`).
 - **Agendamento:** o `js/agendamento.js` mostra os próximos 6 dias (segunda a sábado) e os horários livres, e guarda a reserva no `localStorage` do navegador (ainda não há servidor). As reservas da PKZ e da One to One ficam separadas.
+- **Planos:** o `js/planos.js` guarda os planos de cada marca num array de objetos e cria os cards com `createElement`.
+- **Slider do Hub:** o `js/hub.js` troca a foto de fundo do hero pelas setas ‹ ›, pelos tracinhos ou sozinho a cada 6 segundos (pausa com o mouse em cima). Para mudar as fotos, basta editar o array `fotosHero`.
 
 ## Integrantes
 

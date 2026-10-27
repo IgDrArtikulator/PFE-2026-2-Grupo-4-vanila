@@ -1,8 +1,8 @@
 /* =====================================================================
    MENU HAMBÚRGUER
    Usado em one-to-one/index.html e pkz/index.html.
-   Código do material do professor (hamburguer/script.js), sem alterações:
-   abre/fecha o menu do celular, fecha ao clicar fora e com a tecla ESC.
+   Código do material do professor (hamburguer/script.js): abre/fecha o
+   menu do celular, fecha ao clicar fora e com a tecla ESC.
    ===================================================================== */
 
 const button = document.getElementById("ham");
@@ -34,5 +34,10 @@ if (button && menu) {
     if (e.key === "Escape") {
       closeMenu();
     }
+  });
+
+  // clique num link do menu p/ fechar o menu
+  menu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMenu);
   });
 }
