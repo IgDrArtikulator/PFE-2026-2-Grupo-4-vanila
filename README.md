@@ -11,15 +11,15 @@ Feito só com **HTML, CSS e JavaScript puros** (sem frameworks).
 ## Como rodar
 
 1. Clone o repositório e abra a pasta **raiz** do projeto no VS Code.
-2. Clique com o botão direito em `hub/index.html` → **Open with Live Server**.
+2. Clique com o botão direito em `index.html` (na pasta raiz) → **Open with Live Server**.
 3. Navegue para a PKZ e para a One to One pelos botões do Hub.
 
-> Abra sempre a partir da pasta raiz: os caminhos usam `../` para achar `css/`, `js/` e `img/`.
+> Abra sempre a partir da pasta raiz. O Hub (`index.html`) fica na raiz, então usa `css/`, `js/` e `img/` direto; as páginas da PKZ e da One to One ficam em subpastas e usam `../` para voltar à raiz. Assim o GitHub Pages abre o Hub direto no endereço do site.
 
 ## Estrutura de pastas
 
 ```
-├── hub/index.html          # Página de entrada (escolha da marca)
+├── index.html              # Hub: página de entrada (escolha da marca)
 ├── pkz/
 │   ├── index.html          # Site da Playmakerz
 │   └── img-pkz/            # Logo e fotos da PKZ

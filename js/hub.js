@@ -1,6 +1,8 @@
 /* =====================================================================
    HUB
-   Script do hub/index.html: slider da foto de fundo do hero.
+   Script do Hub (index.html da pasta principal): slider da foto do hero.
+   Os caminhos das fotos (img/...) partem da pasta principal, onde está
+   o index.html que carrega este script.
    1. As fotos ficam num array de objetos (src e alt).
    2. As setas ‹ › e os tracinhos trocam a foto (setAttribute no <img>).
    3. A foto também troca sozinha a cada 6 segundos (setInterval) e para
@@ -13,10 +15,10 @@
 // Para trocar ou incluir fotos, é só mexer neste array:
 // os tracinhos são criados a partir dele.
 const fotosHero = [
-  { src: "../img/hub-hero.webp", alt: "Atleta jovem e atleta adulto treinando lado a lado" },
-  { src: "../img/hub-pkz.webp", alt: "Jovens atletas da Playmakerz em treino de agilidade" },
-  { src: "../img/hub-oto.webp", alt: "Aluna do One to One treinando com kettlebell" },
-  { src: "../img/hub-video-principal.webp", alt: "Um dia de treino no centro de treinamento" }
+  { src: "img/hub-hero.webp", alt: "Atleta jovem e atleta adulto treinando lado a lado" },
+  { src: "img/hub-pkz.webp", alt: "Jovens atletas da Playmakerz em treino de agilidade" },
+  { src: "img/hub-oto.webp", alt: "Aluna do One to One treinando com kettlebell" },
+  { src: "img/hub-video-principal.webp", alt: "Um dia de treino no centro de treinamento" }
 ];
 
 const tempoSlide = 6000; // milissegundos entre uma troca automática e outra

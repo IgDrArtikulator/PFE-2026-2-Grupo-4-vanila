@@ -1,14 +1,226 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PKZ · One to One | Treino de alta performance</title>
-  <!-- Página de entrada do GitHub Pages: leva direto para o Hub -->
-  <meta http-equiv="refresh" content="0; url=hub/index.html">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PKZ · One to One | Treino de alta performance</title>
+
+    <!-- Fonts Hub: Barlow Condensed (títulos) e Barlow (texto) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome (ícones das redes sociais no footer) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <!-- Reserva caso o navegador não redirecione sozinho -->
-  <p><a href="hub/index.html">Entrar no site</a></p>
+<body class="hub">
+    <!-- HEADER (nav) do Hub: links no centro + botão -->
+    <header class="hub-cabecalho">
+        <!-- Botão hambúrguer: só aparece no celular (CSS, seção 7.7) -->
+        <button
+            class="hamburguer"
+            type="button"
+            id="ham"
+            aria-label="Abrir menu"
+            aria-controls="menuSm"
+            aria-expanded="false"
+        >
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <!-- Menu desktop -->
+        <nav aria-label="Navegação do Hub">
+            <ul class="hub-links">
+                <li>
+                    <a class="hub-link ativo" href="#inicio">Início</a>
+                </li>
+                <li>
+                    <a class="hub-link" href="#escolha">Escolha</a>
+                </li>
+                <li>
+                    <a class="hub-link" href="#fotos">Fotos</a>
+                </li>
+            </ul>
+        </nav>
+        <a class="hub-link hub-cta" href="#escolha">Escolha sua jornada</a>
+
+        <!-- Menu do celular: abre e fecha com o js/menu.js -->
+        <nav class="menu-small" id="menuSm" aria-label="Navegação do Hub (celular)">
+            <ul class="nav-links-small">
+                <li>
+                    <a class="hub-link" href="#inicio">Início</a>
+                </li>
+                <li>
+                    <a class="hub-link" href="#escolha">Escolha</a>
+                </li>
+                <li>
+                    <a class="hub-link" href="#fotos">Fotos</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hub-hero hub-container" id="inicio">
+            <!-- Foto de fundo do hero: o js/hub.js troca o src e o alt -->
+            <figure class="hub-hero-foto">
+                <img id="hero-foto" src="img/hub-hero.webp" alt="Atleta jovem e atleta adulto treinando lado a lado">
+            </figure>
+
+            <header class="hub-hero-conteudo">
+                <p class="hub-eyebrow">Alta performance esportiva</p>
+                <h1 class="hub-titulo">Treino de <span>alta performance</span> para todas idades.</h1>
+                <p>Do jovem atleta ao adulto que busca resultado. Escolha o seu caminho.</p>
+                <a class="hub-link hub-btn hub-btn-lilas" href="#escolha">Escolha sua jornada &darr;</a>
+            </header>
+
+            <!-- Controles do slider: o js/hub.js troca a foto de fundo.
+                 hidden = escondido até o JS carregar (sem JS as setas não fariam nada) -->
+            <div class="hub-slider" id="hero-slider" hidden>
+                <button class="hub-slider-seta" type="button" id="hero-anterior" aria-label="Foto anterior">&lsaquo;</button>
+                <!-- Um tracinho para cada foto: criados pelo js/hub.js -->
+                <div class="hub-slider-tracos" id="hero-tracos"></div>
+                <button class="hub-slider-seta" type="button" id="hero-proxima" aria-label="Próxima foto">&rsaquo;</button>
+            </div>
+        </section>
+
+        <hr class="hub-divisor">
+
+        <!-- ESCOLHA SUA JORNADA: as duas marcas -->
+        <section class="hub-secao hub-container" id="escolha">
+            <header>
+                <p class="hub-eyebrow">Escolha sua jornada</p>
+                <h2 class="hub-subtitulo">Duas marcas.<br>Um mesmo padrão de excelência.</h2>
+                <hr class="hub-traco">
+            </header>
+
+            <div class="hub-marcas">
+                <!-- Playmakerz -->
+                <article class="hub-marca">
+                    <figure class="hub-foto">
+                        <span class="hub-selo selo-pkz">Até 17 anos</span>
+                        <img src="img/hub-pkz.webp" alt="Jovens atletas da Playmakerz em treino de agilidade" loading="lazy">
+                    </figure>
+                    <img class="hub-marca-logo" src="pkz/img-pkz/logo-playmakerz.png" alt="Playmakerz">
+                    <p>Formação e alta performance para jovens atletas.</p>
+                    <a class="hub-link hub-btn hub-btn-pkz" href="pkz/index.html">Acessar PKZ &rarr;</a>
+                </article>
+
+                <!-- One to One -->
+                <article class="hub-marca">
+                    <figure class="hub-foto">
+                        <span class="hub-selo selo-one">Adultos</span>
+                        <img src="img/hub-oto.webp" alt="Aluna do One to One treinando com kettlebell" loading="lazy">
+                    </figure>
+                    <img class="hub-marca-logo" src="one-to-one/img-oto/logo-one-to-one.png" alt="One to One Studio">
+                    <p>Treino individualizado para adultos. Um profissional dedicado a você.</p>
+                        <a class="hub-link hub-btn hub-btn-one" href="one-to-one/index.html">Acessar One to One &rarr;</a>
+                </article>
+            </div>
+        </section>
+
+        <hr class="hub-divisor">
+
+        <!-- Galeria de fotos: uma foto grande + 3 menores com legenda -->
+        <section class="hub-secao hub-container" id="fotos">
+            <header>
+                <p class="hub-eyebrow">Em fotos</p>
+                <h2 class="hub-subtitulo">Veja a gente em ação</h2>
+            </header>
+
+            <!-- Foto principal -->
+            <figure class="hub-foto hub-video-principal">
+                <img src="img/hub-video-principal.webp" alt="Um dia de treino no centro de treinamento" loading="lazy">
+                <figcaption class="hub-video-legenda">Um dia de<br>treino</figcaption>
+            </figure>
+
+            <!-- 3 fotos menores -->
+            <div class="hub-videos">
+                <figure class="hub-foto hub-video">
+                    <img src="img/hub-video-pkz.webp" alt="Jovens atletas alongando antes do treino" loading="lazy">
+                    <figcaption>
+                        <span class="hub-video-tag">PKZ</span>
+                        <span class="hub-video-titulo">Preparação de atletas</span>
+                    </figcaption>
+                </figure>
+                <figure class="hub-foto hub-video">
+                    <img src="img/hub-video-oto.webp" alt="Aluna fazendo afundo com kettlebells" loading="lazy">
+                    <figcaption>
+                        <span class="hub-video-tag">One to One</span>
+                        <span class="hub-video-titulo">Treino individual</span>
+                    </figcaption>
+                </figure>
+                <figure class="hub-foto hub-video">
+                    <img src="img/hub-video-bastidores.webp" alt="Treinadores montando os equipamentos antes da aula" loading="lazy">
+                    <figcaption>
+                        <span class="hub-video-tag">PKZ · One to One</span>
+                        <span class="hub-video-titulo">Bastidores</span>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+    <!-- FOOTER: logos, links das duas marcas, redes sociais e copyright -->
+    <footer class="hub-rodape">
+        <div class="hub-rodape-logos">
+            <img src="pkz/img-pkz/logo-playmakerz.png" alt="Playmakerz">
+            <span class="hub-rodape-separador"></span>
+            <img src="one-to-one/img-oto/logo-one-to-one.png" alt="One to One Studio">
+        </div>
+
+        <nav aria-label="Sites das marcas">
+            <ul class="hub-rodape-links">
+                <li><a class="hub-link" href="pkz/index.html">Site PKZ</a></li>
+                <li><a class="hub-link" href="one-to-one/index.html">Site One to One</a></li>
+            </ul>
+        </nav>
+        <!-- Redes sociais -->
+        <nav class="hub-redes" aria-label="Redes sociais">
+            <ul class="rodape-social hub-social">
+                <li>
+                    <a class="hub-link social-pkz"
+                       href="https://www.instagram.com/playmakerz/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Instagram da Playmakerz"
+                       title="Instagram da Playmakerz">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="hub-link social-one"
+                       href="https://www.instagram.com/onetoonestudio/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Instagram do One to One"
+                       title="Instagram do One to One">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="hub-link social-one"
+                       href="https://wa.me/5521971067347"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="WhatsApp do One to One"
+                       title="WhatsApp do One to One">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <p class="hub-rodape-copy">&copy; 2026 PKZ &amp; One to One Studio</p>
+    </footer>
+
+    <!-- Menu hambúrguer (igual ao material do professor: script no fim do body) -->
+    <script src="js/menu.js"></script>
+
+    <!-- Slider do hero (troca da foto de fundo) -->
+    <script src="js/hub.js"></script>
 </body>
 </html>
