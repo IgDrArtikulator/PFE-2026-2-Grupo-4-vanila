@@ -1989,13 +1989,23 @@ ol {
 }
 
 /* ----- 7.2 Header (nav) do Hub ----- */
+/* Header fixo no topo (sticky), igual ao da PKZ e da One to One:
+   rola junto até encostar no topo e fica preso ali. */
 .hub-cabecalho {
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 10;                          /* por cima do hero e das fotos */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 72px;
     padding: 0 var(--hub-margem);
+    background-color: var(--hub-fundo);   /* fundo sólido: o conteúdo não aparece atrás */
+}
+
+/* Ao clicar em "Escolha" ou "Fotos", o título não fica escondido atrás do header */
+.hub main section {
+    scroll-margin-top: 72px;
 }
 
 .hub-links {
