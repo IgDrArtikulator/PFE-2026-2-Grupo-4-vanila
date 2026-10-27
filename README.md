@@ -8,6 +8,12 @@ Site institucional de duas marcas de treino individual do mesmo grupo:
 
 Feito só com **HTML, CSS e JavaScript puros** (sem frameworks).
 
+## Acesse o site
+
+**[https://igdrartikulator.github.io/PFE-2026-2-Grupo-4-vanila/](https://igdrartikulator.github.io/PFE-2026-2-Grupo-4-vanila/)**
+
+Publicado com o **GitHub Pages**: o endereço abre o Hub, e de lá dá para ir para a PKZ e para a One to One.
+
 ## Como rodar
 
 1. Clone o repositório e abra a pasta **raiz** do projeto no VS Code.
@@ -20,6 +26,9 @@ Feito só com **HTML, CSS e JavaScript puros** (sem frameworks).
 
 ```
 ├── index.html              # Hub: página de entrada (escolha da marca)
+├── README.md               # Este arquivo
+├── .nojekyll               # Faz o GitHub Pages publicar os arquivos como estão
+├── .gitignore              # Ignora arquivos do sistema (.DS_Store do Mac)
 ├── pkz/
 │   ├── index.html          # Site da Playmakerz
 │   └── img-pkz/            # Logo e fotos da PKZ
@@ -38,12 +47,20 @@ Feito só com **HTML, CSS e JavaScript puros** (sem frameworks).
 
 ## Como funciona
 
-- **Um CSS para as duas marcas:** as cores e fontes ficam em variáveis (`:root`). A página da PKZ usa `<body class="pkz">`, que troca os valores das variáveis para azul-marinho e dourado.
-- **Responsivo:** abaixo de 767px os links do header viram um menu hambúrguer (`js/menu.js`).
-- **Agendamento:** o `js/agendamento.js` mostra os próximos 6 dias (segunda a sábado) e os horários livres, e guarda a reserva no `localStorage` do navegador (ainda não há servidor). As reservas da PKZ e da One to One ficam separadas.
-- **Planos:** o `js/planos.js` guarda os planos de cada marca num array de objetos e cria os cards com `createElement`.
-- **Slider do Hub:** o `js/hub.js` troca a foto de fundo do hero pelas setas ‹ ›, pelos tracinhos ou sozinho a cada 6 segundos (pausa com o mouse em cima). Para mudar as fotos, basta editar o array `fotosHero`.
-- **Slider das galerias:** o `js/galeria.js` (PKZ e One to One) mostra uma foto por vez; as setas ‹ ›, os tracinhos e as setas do teclado trocam a foto. Para incluir uma foto, basta copiar um `<figure class="galeria-slide">` no HTML.
+- **Um CSS para as duas marcas:** as cores e fontes ficam em variáveis CSS, e cada marca troca esses valores para ter a própria identidade visual.
+- **Responsivo:** o layout se adapta a celular, tablet e desktop; no celular, o menu vira um menu hambúrguer.
+- **Agendamento:** o visitante escolhe dia e horário para uma aula experimental, e a reserva fica salva no próprio navegador (ainda não há servidor).
+- **Conteúdo dinâmico:** os planos e os sliders de fotos (Hub e galerias) são montados e controlados com JavaScript.
+
+## Publicação no GitHub Pages
+
+O site é publicado direto do repositório, sem servidor próprio:
+
+1. **Hub na raiz:** o GitHub Pages abre o `index.html` da pasta principal, então o Hub fica ali e é a primeira página do site.
+2. **`.nojekyll`:** arquivo vazio que desliga o Jekyll (gerador de sites que o Pages usa por padrão), para os arquivos serem publicados exatamente como estão.
+3. **Caminhos relativos:** todos os links usam caminhos relativos (`css/style.css` no Hub, `../css/style.css` e `../index.html` nas páginas das marcas). O site fica dentro de `/PFE-2026-2-Grupo-4-vanila/` no endereço, e um caminho absoluto como `/css/style.css` quebraria.
+
+> O agendamento guarda as reservas no `localStorage`, então no site publicado cada navegador também vê só as próprias reservas.
 
 ## Integrantes
 
