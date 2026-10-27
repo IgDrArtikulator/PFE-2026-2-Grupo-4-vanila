@@ -20,6 +20,9 @@
 
     <!-- JS dos cards de planos (seção #nossos-planos) -->
     <script src="../js/planos.js" defer></script>
+
+    <!-- JS do slider da galeria (seção #galeria) -->
+    <script src="../js/galeria.js" defer></script>
 </head>
 <body>
 
@@ -247,22 +250,41 @@
         <h2 class="titulo-pagina">Galeria de fotos e vídeos</h2>
     </header>
 
-    <div class="galeria-grid">
-        <figure class="foto galeria-item">
-            <img src="img-oto/oto-galeria-1.webp" alt="Aluna segurando um kettlebell durante o treino" loading="lazy">
-        </figure>
+    <!-- Slider: as fotos ficam empilhadas no mesmo quadro e só a que tem a
+         classe "ativa" aparece. O js/galeria.js troca a classe pelas setas
+         e pelos tracinhos. Para incluir uma foto, copie um <figure>. -->
+    <div class="galeria" id="galeria-slider">
+        <div class="foto galeria-quadro">
+            <figure class="galeria-slide ativa">
+                <img src="img-oto/oto-galeria-1.webp" alt="Aluna segurando um kettlebell durante o treino" loading="lazy">
+            </figure>
 
-        <figure class="foto galeria-item">
-            <img src="img-oto/oto-galeria-2.webp" alt="Personal trainer anotando a evolução do aluno" loading="lazy">
-        </figure>
+            <figure class="galeria-slide">
+                <img src="img-oto/oto-galeria-2.webp" alt="Personal trainer anotando a evolução do aluno" loading="lazy">
+            </figure>
 
-        <figure class="foto galeria-item">
-            <img src="img-oto/oto-galeria-video.webp" alt="Aluno treinando com cordas navais (capa do vídeo)" loading="lazy">
-        </figure>
+            <figure class="galeria-slide">
+                <img src="img-oto/oto-galeria-video.webp" alt="Aluno treinando com cordas navais" loading="lazy">
+            </figure>
 
-        <figure class="foto galeria-item">
-            <img src="img-oto/oto-galeria-4.webp" alt="Personal trainer acompanhando o treino pelo celular" loading="lazy">
-        </figure>
+            <figure class="galeria-slide">
+                <img src="img-oto/oto-galeria-4.webp" alt="Personal trainer acompanhando o treino pelo celular" loading="lazy">
+            </figure>
+        </div>
+
+        <div>
+            <p class="eyebrow galeria-contador" id="galeria-contador">01 / 04</p>
+            <!-- aria-live: o leitor de tela lê a nova legenda quando a foto troca -->
+            <p class="galeria-legenda" id="galeria-legenda" aria-live="polite">Aluna segurando um kettlebell durante o treino</p>
+
+            <!-- hidden = escondido até o JS carregar (sem JS as setas não fariam nada) -->
+            <div class="galeria-controles" id="galeria-controles" hidden>
+                <button class="galeria-seta" type="button" id="galeria-anterior" aria-label="Foto anterior">&lsaquo;</button>
+                <!-- Um tracinho para cada foto: criados pelo js/galeria.js -->
+                <div class="galeria-tracos" id="galeria-tracos"></div>
+                <button class="galeria-seta" type="button" id="galeria-proxima" aria-label="Próxima foto">&rsaquo;</button>
+            </div>
+        </div>
     </div>
 </section>
 

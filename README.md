@@ -32,6 +32,7 @@ Feito só com **HTML, CSS e JavaScript puros** (sem frameworks).
     ├── menu.js             # Menu hambúrguer (celular)
     ├── agendamento.js      # Dias, horários e reservas do agendamento
     ├── planos.js           # Cards de planos da PKZ e da One to One
+    ├── galeria.js          # Slider da galeria da PKZ e da One to One
     └── hub.js              # Slider da foto do hero no Hub
 ```
 
@@ -42,6 +43,7 @@ Feito só com **HTML, CSS e JavaScript puros** (sem frameworks).
 - **Agendamento:** o `js/agendamento.js` mostra os próximos 6 dias (segunda a sábado) e os horários livres, e guarda a reserva no `localStorage` do navegador (ainda não há servidor). As reservas da PKZ e da One to One ficam separadas.
 - **Planos:** o `js/planos.js` guarda os planos de cada marca num array de objetos e cria os cards com `createElement`.
 - **Slider do Hub:** o `js/hub.js` troca a foto de fundo do hero pelas setas ‹ ›, pelos tracinhos ou sozinho a cada 6 segundos (pausa com o mouse em cima). Para mudar as fotos, basta editar o array `fotosHero`.
+- **Slider das galerias:** o `js/galeria.js` (PKZ e One to One) mostra uma foto por vez; as setas ‹ ›, os tracinhos e as setas do teclado trocam a foto. Para incluir uma foto, basta copiar um `<figure class="galeria-slide">` no HTML.
 
 ## Integrantes
 

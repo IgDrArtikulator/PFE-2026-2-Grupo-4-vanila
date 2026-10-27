@@ -1720,36 +1720,155 @@ ol {
    Seção #galeria de one-to-one/index.html e pkz/index.html
 ===================================================================== */
 
-/* ----- 6.1 Galeria geral ----- */
+/* ----- 6.1 Galeria geral (slider do js/galeria.js) ----- */
 
-.galeria-grid {
+/* Foto à esquerda | contador, legenda e controles à direita */
+.galeria {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 5fr 7fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.galeria > * {
+    min-width: 0;
+}
+
+/* Quadro da foto. As fotos da galeria são verticais (928x1152 = 4:5),
+   então o quadro tem o mesmo formato (aspect-ratio). O object-fit: cover
+   da .foto img (seção 0.7) faz a foto preencher o quadro sem distorcer. */
+.galeria-quadro {
+    position: relative;   /* âncora das fotos empilhadas (absolute) */
+    aspect-ratio: 4 / 5;
+    max-height: 80vh;
+}
+
+/* Todas as fotos ocupam o quadro inteiro, uma em cima da outra.
+   Só a que tem a classe "ativa" fica visível. */
+.galeria-slide {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.galeria-slide.ativa {
+    opacity: 1;
+}
+
+.galeria-contador {
+    margin-bottom: 16px;
+}
+
+/* Legenda: o alt da foto, trocado pelo JS */
+.galeria-legenda {
+    min-height: 2.4em;   /* reserva 2 linhas, para os botões não pularem */
+    margin-bottom: 40px;
+    font-family: var(--fonte-titulo);
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+/* O atributo hidden esconde os controles até o JS carregar.
+   Sem esta regra, o display: flex abaixo ganharia do hidden (igual à seção 5.7). */
+.galeria-controles[hidden] {
+    display: none;
+}
+
+.galeria-controles {
+    display: flex;
+    align-items: center;
     gap: 24px;
 }
 
-.galeria-item {
-    height: 400px;
+/* Setas ‹ ›: botões redondos com borda fina */
+.galeria-seta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    background: none;
+    border: 1px solid var(--cor-borda);
+    border-radius: 50%;
+    font-size: 28px;
+    line-height: 1;
+    color: var(--cor-texto);
+    cursor: pointer;
+}
+
+.galeria-seta:hover {
+    border-color: var(--cor-azul);
+    color: var(--cor-azul);
+}
+
+.galeria-tracos {
+    display: flex;
+    gap: 8px;
+}
+
+/* Tracinho: traço de 24x2px visível, mas botão de 22px de altura para
+   ficar fácil de clicar (background-clip pinta só o miolo, sem o padding) */
+.galeria-traco {
+    width: 24px;
+    height: 22px;
+    padding: 10px 0;
+    border: 0;
+    background-color: var(--cor-texto-apagado);
+    background-clip: content-box;
+    cursor: pointer;
+}
+
+.galeria-traco.ativo {
+    background-color: var(--cor-azul);
+}
+
+.galeria-seta:focus-visible,
+.galeria-traco:focus-visible {
+    outline: 2px solid var(--cor-azul);
+    outline-offset: 3px;
 }
 
 /* ----- Layout responsivo ----- */
 
-@media (max-width: 767px) {
-    .galeria-grid {
-        grid-template-columns: repeat(2, 1fr);
+/* Tablets: foto em cima, legenda e controles embaixo */
+@media (max-width: 1100px) {
+    .galeria {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
 
-    .galeria-item {
-        height: 200px;
+    .galeria-quadro {
+        width: 100%;
+        max-width: 560px;
+    }
+}
+
+@media (max-width: 767px) {
+    .galeria-legenda {
+        font-size: 22px;
+        margin-bottom: 24px;
+    }
+
+    .galeria-seta {
+        width: 48px;
+        height: 48px;
     }
 }
 
 /* ----- 6.2 Galeria Play Makerz -----
    Mesmas classes; as cores vêm das variáveis do tema .pkz.
+   Legenda mais leve, como os outros títulos da PKZ.
 */
 
-.pkz .galeria-item {
-    background-color: var(--cor-placeholder);
+.pkz .galeria-legenda {
+    font-weight: 500;
+    letter-spacing: 0.02em;
 }
 
 

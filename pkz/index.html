@@ -20,6 +20,9 @@
 
   <!-- JS dos cards de planos (seção #nossos-planos) -->
   <script src="../js/planos.js" defer></script>
+
+  <!-- JS do slider da galeria (seção #galeria) -->
+  <script src="../js/galeria.js" defer></script>
 </head>
 
 <body class="pkz">
@@ -240,7 +243,7 @@
 </section>
 
 <!-- GALERIA PLAYMAKERZ
-     Grid de 4 colunas com as fotos da pasta img-pkz/.
+     Slider com as fotos da pasta img-pkz/ (js/galeria.js, o mesmo da One to One).
 -->
 
 <section class="pagina" id="galeria">
@@ -250,24 +253,40 @@
         <h2 class="titulo-pagina">Galeria de fotos e vídeos</h2>
     </header>
 
-    <div class="galeria-grid">
+    <!-- Slider: as fotos ficam empilhadas no mesmo quadro e só a que tem a
+         classe "ativa" aparece. Para incluir uma foto, copie um <figure>. -->
+    <div class="galeria" id="galeria-slider">
+        <div class="foto galeria-quadro">
+            <figure class="galeria-slide ativa">
+                <img src="img-pkz/pkz-galeria-1.webp" alt="Atleta saltando no box durante o treino" loading="lazy">
+            </figure>
 
-        <figure class="foto galeria-item">
-            <img src="img-pkz/pkz-galeria-1.webp" alt="Atleta saltando no box durante o treino" loading="lazy">
-        </figure>
+            <figure class="galeria-slide">
+                <img src="img-pkz/pkz-galeria-2.webp" alt="Cones e escada de agilidade prontos para o treino" loading="lazy">
+            </figure>
 
-        <figure class="foto galeria-item">
-            <img src="img-pkz/pkz-galeria-2.webp" alt="Cones e escada de agilidade prontos para o treino" loading="lazy">
-        </figure>
+            <figure class="galeria-slide">
+                <img src="img-pkz/pkz-galeria-video.webp" alt="Jovem atleta driblando a bola de basquete" loading="lazy">
+            </figure>
 
-        <figure class="foto galeria-item">
-            <img src="img-pkz/pkz-galeria-video.webp" alt="Jovem atleta driblando a bola de basquete (capa do vídeo)" loading="lazy">
-        </figure>
+            <figure class="galeria-slide">
+                <img src="img-pkz/pkz-galeria-4.webp" alt="Escada de agilidade e barreiras no piso de treino" loading="lazy">
+            </figure>
+        </div>
 
-        <figure class="foto galeria-item">
-            <img src="img-pkz/pkz-galeria-4.webp" alt="Escada de agilidade e barreiras no piso de treino" loading="lazy">
-        </figure>
+        <div>
+            <p class="eyebrow galeria-contador" id="galeria-contador">01 / 04</p>
+            <!-- aria-live: o leitor de tela lê a nova legenda quando a foto troca -->
+            <p class="galeria-legenda" id="galeria-legenda" aria-live="polite">Atleta saltando no box durante o treino</p>
 
+            <!-- hidden = escondido até o JS carregar (sem JS as setas não fariam nada) -->
+            <div class="galeria-controles" id="galeria-controles" hidden>
+                <button class="galeria-seta" type="button" id="galeria-anterior" aria-label="Foto anterior">&lsaquo;</button>
+                <!-- Um tracinho para cada foto: criados pelo js/galeria.js -->
+                <div class="galeria-tracos" id="galeria-tracos"></div>
+                <button class="galeria-seta" type="button" id="galeria-proxima" aria-label="Próxima foto">&rsaquo;</button>
+            </div>
+        </div>
     </div>
 
 </section>
