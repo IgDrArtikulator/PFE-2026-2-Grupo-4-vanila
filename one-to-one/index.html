@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=DM+Sans:wght@400;500&family=Oswald:wght@400;500&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome (ícones da seção Contato), versão gratuita via CDN -->
+    <!-- Font Awesome (ícones do Contato e dos selos de Treinos), versão gratuita via CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- CSS único do projeto (pasta css, na pasta principal) -->
@@ -138,38 +138,52 @@
   <header>
     <p class="eyebrow">One to One · Treinos</p>
     <h2 class="titulo-pagina">Informações sobre treinos</h2>
-    <p class="texto-lead treinos-intro">
-      Sessões individuais, com programa montado a partir da sua avaliação
-      e necessidades.
-    </p>
   </header>
 
-  <!-- 3 cards em grid (3 colunas no desktop, 1 no celular) -->
-  <div class="treinos-cards">
+  <!-- 6 cards em grid (3 colunas no desktop, 1 no celular);
+       "compacto" = cards mais baixos que os da PKZ -->
+  <div class="treinos-cards treinos-cards-compacto">
     <article class="card treino-card">
-      <p class="eyebrow">Avaliação</p>
-      <h2>Ponto de partida</h2>
-      <p>
-        Primeira sessão para entender histórico, rotina e objetivo de
-        condicionamento.
-      </p>
+      <p class="eyebrow">Treino</p>
+      <h2>Personalizado de verdade</h2>
+      <p>Montado a partir da sua avaliação e do seu objetivo.</p>
     </article>
 
     <article class="card treino-card">
-      <p class="eyebrow">Programa</p>
-      <h2>Melhora do seu condicionamento físico</h2>
-      <p>
-        Força, mobilidade e capacidade aeróbica de acordo com seu objetivo.
-      </p>
+      <p class="eyebrow">Equipamentos</p>
+      <h2>Novos e planejados para você</h2>
+      <p>Escolhidos para o seu melhor desenvolvimento.</p>
+    </article>
+
+    <article class="card treino-card">
+      <p class="eyebrow">Estrutura</p>
+      <h2>Espaço pensado para receber você</h2>
+      <p>Conforto, segurança e privacidade em cada treino.</p>
     </article>
 
     <article class="card treino-card">
       <p class="eyebrow">Acompanhamento</p>
-      <h2>Um profissional dedicado ao aluno</h2>
-      <p>
-        Horários flexíveis, evolução registrada e ajuste do programa
-        sessão a sessão.
-      </p>
+      <h2>Personal trainer dedicado a você</h2>
+      <p>Ao seu lado em todo o processo, ajustando cada etapa.</p>
+    </article>
+
+    <!-- Cards com selo: ícone do Font Awesome + profissional responsável -->
+    <article class="card treino-card">
+      <div class="treino-card-topo">
+        <p class="eyebrow">Nutrição</p>
+        <span class="treino-selo"><i class="fa-solid fa-apple-whole" aria-hidden="true"></i>Nutricionista</span>
+      </div>
+      <h2>Nutrição prática e eficiente</h2>
+      <p>Alimentação que cabe na sua rotina e potencializa resultados.</p>
+    </article>
+
+    <article class="card treino-card">
+      <div class="treino-card-topo">
+        <p class="eyebrow">Fisioterapia</p>
+        <span class="treino-selo"><i class="fa-solid fa-hand-holding-medical" aria-hidden="true"></i>Fisioterapeuta</span>
+      </div>
+      <h2>Fisioterapia com tecnologia de ponta</h2>
+      <p>Equipamentos modernos para cuidar da sua recuperação.</p>
     </article>
   </div>
 </section>

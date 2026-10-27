@@ -661,6 +661,58 @@ ol {
   margin-bottom: 20px;
 }
 
+/* One to One (6 cards): mais baixos e com menos respiro, para a seção não ficar longa */
+.treinos-cards-compacto .treino-card {
+  min-height: 260px;
+  padding: 40px 36px;
+}
+
+.treinos-cards-compacto .treino-card h2 + p {
+  padding-top: 20px;
+}
+
+/* Linha do topo nos cards com selo: eyebrow à esquerda, selo à direita */
+.treino-card-topo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.treino-card-topo .eyebrow {
+  margin-bottom: 0;
+}
+
+/* Selo de Nutrição e Fisioterapia (ícone do Font Awesome + profissional) */
+.treino-selo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px 6px 6px;
+  border: 1px solid var(--cor-azul-borda);
+  border-radius: 999px;
+  background-color: var(--cor-azul-escuro);
+  font-family: var(--fonte-condensada);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cor-azul);
+}
+
+/* Bolinha azul com o ícone dentro */
+.treino-selo i {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--cor-azul);
+  font-size: 14px;
+  color: var(--cor-fundo);
+}
+
 .treino-card h2 {
   font-family: var(--fonte-titulo);
   font-weight: 900;
@@ -688,7 +740,8 @@ ol {
   }
 
   /* Cards mais compactos no celular para acomodar palavras longas. */
-  .treino-card {
+  .treino-card,
+  .treinos-cards-compacto .treino-card {
     min-height: auto;
     padding: 32px 24px;
   }
