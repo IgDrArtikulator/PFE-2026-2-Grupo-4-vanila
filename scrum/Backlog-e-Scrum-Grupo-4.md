@@ -214,16 +214,3 @@ A Review inspeciona o incremento e orienta adaptações. Apresentar uma funciona
 | Recarregar após reservar e alternar marcas | Persistência local e separação entre marcas | Não executado em navegador |
 | Armazenamento inválido ou indisponível | Recuperação segura e orientação clara | Melhoria pendente |
 
-## 9. Impedimentos e próximos passos
-
-| Impedimento / decisão | Encaminhamento |
-|---|---|
-| PO e Scrum Master não definidos | Equipe escolhe antes do primeiro Planning |
-| Grafia dos nomes dos integrantes | Confirmar grafia e uniformizar documentação |
-| Escopo de cadastro e vídeos | PO registra se são obrigatórios ou se o escopo foi alterado |
-| WhatsApp PKZ sem número | Solicitar contato correto à referência do projeto |
-| Confirmação visual sugere reserva real | Explicitar simulação local no fluxo |
-| Falta de evidências de validação | Executar o plano de verificação e registrar resultados |
-| Cronograma e capacidade desconhecidos | Fixar início das sprints e disponibilidade no Planning |
-
-**Registro de acompanhamento sugerido:** ID, sprint, responsável atual, estado, impedimento, evidência de teste/revisão e data real de conclusão. Não produzir retrospectivas, atas ou gráficos de progresso retroativos sem registros da equipe.
