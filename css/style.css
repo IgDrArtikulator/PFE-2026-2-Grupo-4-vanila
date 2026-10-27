@@ -944,6 +944,143 @@ ol {
     font-size: 24px;
   }
 }
+
+/* ----- 3.5 Nossos planos (cards criados pelo js/planos.js) ----- */
+.planos-lista-texto {
+  max-width: 720px;
+  margin-bottom: 56px;
+}
+
+/* One to One: 4 planos lado a lado */
+.planos-lista {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* Playmakerz: 3 planos lado a lado */
+.pkz .planos-lista {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* Card em coluna. O gap dá o espaço entre as partes e o
+   margin-top: auto do botão empurra ele para o fim do card. */
+.plano-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 32px 32px;
+}
+
+.plano-item .eyebrow {
+  font-size: 12px;
+  line-height: 1.6;
+  letter-spacing: 0.2em;
+  margin-bottom: 0;
+}
+
+.plano-nome {
+  font-family: var(--fonte-titulo);
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.plano-descricao {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--cor-texto-suave);
+}
+
+/* Lista de serviços com um tracinho na cor de destaque (::before) */
+.plano-itens {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 20px;
+  border-top: 1px solid var(--cor-borda);
+}
+
+.plano-itens li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--cor-texto-suave);
+}
+
+.plano-itens li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 10px;
+  height: 2px;
+  background-color: var(--cor-azul);
+}
+
+/* Selo "Prioridade no agendamento" */
+.plano-nota {
+  align-self: flex-start;
+  padding: 6px 14px;
+  border: 1px solid var(--cor-azul);
+  border-radius: 999px;
+  font-family: var(--fonte-condensada);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cor-azul);
+}
+
+.plano-item .btn {
+  width: 100%;
+  margin-top: auto;
+  padding: 0 16px;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+}
+
+/* Plano em destaque: borda na cor da marca e fundo um pouco mais claro */
+.plano-item-destaque {
+  background-color: var(--cor-superficie);
+  border-color: var(--cor-azul);
+}
+
+/* Playmakerz: nome do plano mais leve, como os outros títulos da PKZ */
+.pkz .plano-nome {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* One to One: 2 por linha em telas médias */
+@media (max-width: 1400px) {
+  .planos-lista {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Playmakerz: um card embaixo do outro, igual aos outros cards da PKZ */
+@media (max-width: 1200px) {
+  .pkz .planos-lista {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .planos-lista {
+    grid-template-columns: 1fr;
+  }
+
+  .plano-item {
+    padding: 32px 24px;
+  }
+
+  .plano-nome {
+    font-size: 24px;
+  }
+}
 /* =====================================================================
    4. CONTATO
    Seção #contato de one-to-one/index.html e pkz/index.html

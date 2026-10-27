@@ -17,6 +17,9 @@
 
   <!-- JS do agendamento; defer = só roda depois que o HTML todo carregou -->
   <script src="../js/agendamento.js" defer></script>
+
+  <!-- JS dos cards de planos (seção #nossos-planos) -->
+  <script src="../js/planos.js" defer></script>
 </head>
 
 <body class="pkz">
@@ -162,6 +165,18 @@
       <a class="btn btn-contorno" href="#agendamento">Montar meu pacote</a>
     </article>
   </div>
+</section>
+
+<!-- ===== NOSSOS PLANOS PLAYMAKERZ =====
+     Os cards são criados pelo js/planos.js a partir de um array de objetos -->
+<section class="pagina" id="nossos-planos">
+  <header>
+    <p class="eyebrow">Play Makerz · Planos</p>
+    <h2 class="titulo-pagina">Nossos planos</h2>
+    <p class="texto-lead planos-lista-texto">Treino, saúde e desenvolvimento no mesmo plano. Escolha o ritmo de evolução do atleta.</p>
+  </header>
+
+  <div class="planos-lista" id="planos-lista"></div>
 </section>
 
 <!-- ===== INFORMAÇÕES SOBRE TREINOS PLAYMAKERZ ===== -->

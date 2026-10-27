@@ -17,6 +17,9 @@
 
     <!-- JS do agendamento; defer = só roda depois que o HTML todo carregou -->
     <script src="../js/agendamento.js" defer></script>
+
+    <!-- JS dos cards de planos (seção #nossos-planos) -->
+    <script src="../js/planos.js" defer></script>
 </head>
 <body>
 
@@ -203,6 +206,18 @@
       </div>
     </li>
   </ol>
+</section>
+
+<!-- ===== NOSSOS PLANOS =====
+     Os cards são criados pelo js/planos.js a partir de um array de objetos -->
+<section class="pagina" id="nossos-planos">
+  <header>
+    <p class="eyebrow">One to One · Planos</p>
+    <h2 class="titulo-pagina">Nossos planos</h2>
+    <p class="texto-lead planos-lista-texto">Escolha a frequência que cabe na sua rotina. Todos os planos são de treino individual e incluem fisioterapia e nutrição.</p>
+  </header>
+
+  <div class="planos-lista" id="planos-lista"></div>
 </section>
 
 <!-- ===== UNIDADES E LOCALIZAÇÃO ===== -->
